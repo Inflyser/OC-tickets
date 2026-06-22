@@ -16,14 +16,14 @@
   .sidebar-search input:focus{border-color:#7c7cf0}
   .sidebar-search input::placeholder{color:#666}
   .mode-btns{display:flex;gap:6px;padding:8px 16px 4px}
-  .mode-btn{flex:1;padding:8px 0;border:none;border-radius:8px;cursor:pointer;font-size:12px;font-weight:600;transition:all .2s}
+  .mode-btn{flex:1;padding:8px 0;border:none;border-radius:8px;cursor:pointer;font-size:12px;font-weight:600;transition:all .2s;font-family:inherit}
   .mode-btn.read{background:#2a2a5a;color:#7c7cf0}
   .mode-btn.read.active{background:#7c7cf0;color:#fff}
   .mode-btn.test{background:#3a2a2a;color:#f07c7c}
   .mode-btn.test.active{background:#cf4a4a;color:#fff}
   .mode-btn.cards{background:#2a3a2a;color:#7cf07c}
   .mode-btn.cards.active{background:#4acf4a;color:#fff}
-  .ticket-list{flex:1;overflow-y:auto;padding:4px 0}
+  .ticket-list{flex:1;overflow-y:auto;padding:4px 0;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
   .ticket-list::-webkit-scrollbar{width:6px}
   .ticket-list::-webkit-scrollbar-thumb{background:#2a2a4a;border-radius:3px}
   .ticket-item{padding:10px 20px;cursor:pointer;border-bottom:1px solid #1a1a30;transition:all .15s;display:flex;align-items:center;gap:10px}
@@ -31,24 +31,24 @@
   .ticket-item.active{background:#2a2a5a;border-left:3px solid #7c7cf0}
   .ticket-item .num{width:26px;height:26px;border-radius:50%;background:#2a2a4a;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#7c7cf0;flex-shrink:0}
   .ticket-item.active .num{background:#7c7cf0;color:#fff}
-  .ticket-item .title{font-size:13px;line-height:1.3;color:#ccc;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .ticket-item .title{font-size:12px;line-height:1.3;color:#ccc;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .ticket-item.active .title{color:#fff}
-  .main{flex:1;overflow-y:auto;background:#0d0d1a}
+  .main{flex:1;overflow-y:auto;overflow-x:hidden;background:#0d0d1a;-webkit-overflow-scrolling:touch}
   .main::-webkit-scrollbar{width:8px}
   .main::-webkit-scrollbar-thumb{background:#2a2a4a;border-radius:4px}
   .content{max-width:860px;margin:0 auto;padding:40px 48px 80px}
   .content-header{margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid #1e1e3a}
   .content-header .num-badge{display:inline-block;background:#7c7cf0;color:#fff;padding:2px 12px;border-radius:12px;font-size:12px;font-weight:600;margin-bottom:8px}
-  .content-header h2{font-size:26px;color:#f0f0ff;line-height:1.3}
-  .section{margin-bottom:28px}
-  .section h3{font-size:16px;color:#7c7cf0;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .content-header h2{font-size:24px;color:#f0f0ff;line-height:1.3}
+  .section{margin-bottom:24px}
+  .section h3{font-size:15px;color:#7c7cf0;margin-bottom:8px;display:flex;align-items:center;gap:8px}
   .section p,.section li{font-size:14px;line-height:1.7;color:#bbb}
   .section ul{padding-left:20px}
   .section li{margin-bottom:4px}
   .section li::marker{color:#7c7cf0}
   .highlight{color:#e0e0ff;font-weight:500}
   .code{display:inline-block;background:#1a1a2e;padding:2px 8px;border-radius:4px;font-family:'Cascadia Code','Fira Code',monospace;font-size:13px;color:#b084f0}
-  .block{background:#141428;border-left:3px solid #7c7cf0;border-radius:0 8px 8px 0;padding:16px 20px;margin:12px 0;font-size:14px;line-height:1.6;color:#aaa}
+  .block{background:#141428;border-left:3px solid #7c7cf0;border-radius:0 8px 8px 0;padding:14px 18px;margin:10px 0;font-size:14px;line-height:1.6;color:#aaa}
   .empty-state{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#555;text-align:center;padding:40px}
   .empty-state .big{font-size:64px;margin-bottom:16px}
   .empty-state h2{font-size:20px;color:#777;margin-bottom:8px}
@@ -56,8 +56,6 @@
   .progress-bar{height:3px;background:#1a1a2e;border-radius:2px;margin-top:12px;overflow:hidden}
   .progress-bar .fill{height:100%;background:#7c7cf0;border-radius:2px;transition:width .3s}
   .emoji{font-size:1.2em}
-
-  /* Test mode */
   .test-header{text-align:center;margin-bottom:32px}
   .test-header h2{font-size:22px;color:#f07c7c;margin-bottom:4px}
   .test-header p{font-size:13px;color:#888}
@@ -82,7 +80,7 @@
   .test-explanation.correct{background:#1a3a1a;color:#8f8;border:1px solid #4acf4a}
   .test-explanation.wrong{background:#3a1a1a;color:#f88;border:1px solid #cf4a4a}
   .test-actions{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}
-  .test-btn{padding:10px 24px;border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;transition:all .2s}
+  .test-btn{padding:10px 24px;border:none;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;transition:all .2s;font-family:inherit}
   .test-btn.next{background:#7c7cf0;color:#fff}
   .test-btn.next:hover{background:#6a6ad8}
   .test-btn.finish{background:#cf4a4a;color:#fff}
@@ -102,8 +100,6 @@
   .result-card .stats{display:flex;gap:16px;justify-content:center;margin-bottom:20px;flex-wrap:wrap}
   .result-card .stat{padding:8px 16px;background:#1a1a30;border-radius:8px;font-size:13px}
   .result-card .stat .val{font-weight:600;color:#f0f0ff}
-
-  /* Flashcards */
   .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
   .flashcard{cursor:pointer;perspective:600px;height:140px}
   .flashcard-inner{position:relative;width:100%;height:100%;transition:transform .4s;transform-style:preserve-3d}
@@ -116,22 +112,87 @@
   .cards-header h2{font-size:22px;color:#7cf07c;margin-bottom:4px}
   .cards-header p{font-size:13px;color:#888}
   .cards-controls{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
-
+  .sidebar-close{display:none;background:none;border:none;color:#888;font-size:18px;cursor:pointer;padding:4px 8px;border-radius:6px;transition:all .2s}
+  .sidebar-close:hover{background:#2a2a4a;color:#fff}
+  .hamburger{display:none;position:fixed;top:12px;left:12px;z-index:100;width:44px;height:44px;border:none;border-radius:10px;background:#1a1a2e;color:#7c7cf0;font-size:22px;cursor:pointer;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,.4);transition:all .2s}
+  .hamburger:hover{background:#2a2a5a}
+  .sidebar-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:89;opacity:0;transition:opacity .3s}
+  .sidebar-overlay.show{opacity:1}
+  .sidebar{transition:transform .3s ease;z-index:90}
   @media(max-width:768px){
-    .sidebar{width:100%;min-width:100%;max-height:50vh}
-    body{flex-direction:column}
-    .content{padding:24px 20px 60px}
-    .content-header h2{font-size:20px}
-    .card-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+    .hamburger{display:flex}
+    .sidebar-close{display:block}
+    .sidebar{position:fixed;top:0;left:0;height:100vh;width:300px;min-width:300px;max-height:none;transform:translateX(-110%);border-right:1px solid #2a2a4a}
+    .sidebar.open{transform:translateX(0)}
+    .sidebar-overlay{display:block}
+    body{padding-top:0;overflow:auto}
+    .main{margin-left:0;width:100%}
+    .content{padding:68px 16px 80px}
+    .content-header h2{font-size:18px}
+    .content-header{margin-bottom:20px;padding-bottom:14px}
+    .section{margin-bottom:16px}
+    .section p,.section li{font-size:13px;line-height:1.6}
+    .section h3{font-size:14px}
+    .block{font-size:13px;padding:12px 14px}
+    .question-card{padding:18px}
+    .question-card .q-text{font-size:15px}
+    .answer{padding:10px 12px;font-size:13px;min-height:44px}
+    .answer .letter{width:26px;height:26px;font-size:12px}
+    .card-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+    .flashcard{height:120px}
+    .flashcard-face{font-size:12px;padding:12px}
+    .result-card .score{font-size:40px}
+    .result-card{padding:20px}
+    .test-header h2{font-size:18px}
+    .test-btn{padding:12px 20px;font-size:13px;min-height:44px}
+    .mode-btn{padding:10px 0;font-size:13px;min-height:44px}
+    .ticket-item{padding:12px 16px;min-height:44px}
+    .ticket-item .title{font-size:13px}
+    .sidebar-header{padding:14px 16px}
+    .sidebar-header h1{font-size:16px}
+    .sidebar-search{padding:8px 12px}
+    .sidebar-search input{font-size:16px;padding:12px 14px}
+    .progress-bar{margin-top:10px}
+    .cards-controls .test-btn{min-height:44px;font-size:13px}
+    .test-actions .test-btn{flex:1;text-align:center}
+    .test-actions{flex-direction:column}
+    .test-actions .test-btn{width:100%}
+    .empty-state .big{font-size:48px}
+    .empty-state h2{font-size:18px}
+  }
+  @media(max-width:480px){
+    .sidebar{width:100%;min-width:100%}
+    .content{padding:60px 12px 70px}
+    .content-header h2{font-size:16px}
+    .card-grid{grid-template-columns:repeat(auto-fill,minmax(100px,1fr))}
+    .flashcard{height:100px}
+    .flashcard-face{font-size:11px;padding:8px}
+    .question-card{padding:14px}
+    .question-card .q-text{font-size:14px}
+    .answer{padding:8px 10px;font-size:12px;min-height:40px}
+    .answer .letter{width:22px;height:22px;font-size:11px}
+    .result-card .score{font-size:32px}
+    .section p,.section li{font-size:12px}
+    .section h3{font-size:13px}
+    .block{font-size:12px;padding:10px 12px}
+    .code{font-size:11px}
+    .ticket-item{padding:10px 12px;min-height:40px}
+    .ticket-item .title{font-size:12px}
+    .ticket-item .num{width:22px;height:22px;font-size:10px}
+    .hamburger{top:8px;left:8px;width:40px;height:40px;font-size:18px}
   }
 </style>
 </head>
 <body>
-
+<button class="hamburger" id="hamburgerBtn" onclick="toggleSidebar()">☰</button>
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
 <div class="sidebar">
   <div class="sidebar-header">
-    <h1>📚 Билеты по ОС</h1>
-    <p>Операционные системы — теория</p>
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <h1>📚 Билеты по ОС</h1>
+      <button class="sidebar-close" onclick="closeSidebar()" aria-label="Закрыть">✕</button>
+    </div>
+    <p>81 билет — теория</p>
     <div class="progress-bar"><div class="fill" id="progressFill" style="width:0%"></div></div>
   </div>
   <div class="sidebar-search">
@@ -144,186 +205,186 @@
   </div>
   <div class="ticket-list" id="ticketList"></div>
 </div>
-
 <div class="main" id="mainContent">
   <div class="empty-state" id="emptyState">
     <div class="big">🎓</div>
     <h2>Выберите билет</h2>
-    <p>Нажмите на любой билет слева, чтобы открыть его содержание</p>
+    <p>Нажмите на любой билет слева</p>
   </div>
   <div class="content" id="ticketContent" style="display:none"></div>
 </div>
-
 <script>
-const tickets = [
-  {num:1, title:"Структура вычислительной системы",
-   content:`<div class="section"><h3>💻 Состав вычислительной системы</h3><p>Любая вычислительная система состоит из двух основных частей: <span class="highlight">технической</span> (все устройства ПК — процессор, память, диски, контроллеры) и <span class="highlight">программной</span> (совокупность программ — системное и прикладное ПО). Эти две части неразрывно связаны и входят в состав операционной системы.</p></div><div class="section"><h3>📖 Определение ОС</h3><p><span class="emoji">⚙️</span> <strong>Операционная система (ОС)</strong> — это комплекс взаимосвязанных программ, предназначенных для управления ресурсами компьютера и организации взаимодействия с пользователем. ОС выступает посредником между аппаратурой и прикладным программным обеспечением.</p></div><div class="section"><h3>🧅 Слои программного обеспечения</h3><p>Компьютерную систему удобно представлять в виде многослойной структуры. Каждый слой использует сервисы нижележащего слоя и предоставляет возможности вышележащему:</p><ul><li><span class="emoji">🖥️</span> <span class="highlight">Аппаратура (hardware)</span> — физические устройства</li><li><span class="emoji">🐧</span> <span class="highlight">Ядро ОС</span> — управляет ресурсами, планирует процессы</li><li><span class="emoji">🛠️</span> <span class="highlight">Системные утилиты</span> — обслуживающие программы</li><li><span class="emoji">📱</span> <span class="highlight">Прикладные программы</span> — решают пользовательские задачи</li><li><span class="emoji">👤</span> <span class="highlight">Пользовательский интерфейс</span> — взаимодействие с человеком</li></ul></div>`},
-  {num:2, title:"Операционная система как виртуальная машина", content:`<div class="section"><h3>🧩 Абстрагирование</h3><p>При разработке ОС широко применяется <span class="highlight">абстрагирование</span> — важный метод упрощения, позволяющий сконцентрироваться на взаимодействии высокоуровневых компонентов, игнорируя детали реализации. В этом смысле ОС представляет собой интерфейс между пользователем и компьютером, предоставляя ему <span class="highlight">виртуальную машину</span>, которую легче программировать и с которой легче работать, чем с реальной аппаратурой.</p></div><div class="section"><h3>📋 Практический пример</h3><p>Чтобы считать или записать информацию на дискету, программисту без ОС пришлось бы запускать двигатель, управлять головкой, следить за датчиками, выбирать блоки, дорожки, сектора и т.д. Все эти сложные действия <span class="highlight">берёт на себя операционная система</span>. Программист просто вызывает <code class="code">read(file, buffer, size)</code>.</p></div><div class="block">💡 <strong>Идея:</strong> ОС превращает "сложное железо" с множеством технических деталей в "простой и понятный интерфейс" для программ и пользователя.</div>`},
-  {num:3, title:"Операционная система как менеджер ресурсов", content:`<div class="section"><h3>📊 ОС — диспетчер ресурсов</h3><p>Операционная система предназначена для управления всеми частями сложной архитектуры компьютера. Она предотвращает хаос — например, буферизует информацию, предназначенную для печати, на диске и организует очередь на печать, чтобы несколько программ не "дрались" за принтер. ОС как менеджер ресурсов осуществляет <span class="highlight">упорядоченное и контролируемое распределение</span> процессоров, памяти, устройств ввода-вывода и других ресурсов между различными программами. Она решает, какой процесс получит процессор в следующий момент, сколько памяти выделить, как организовать доступ к диску.</p><ul><li><span class="emoji">✅</span> Упорядоченное распределение ресурсов</li><li><span class="emoji">✅</span> Контролируемый доступ к устройствам</li><li><span class="emoji">✅</span> Разрешение конфликтов между программами</li></ul></div>`},
-  {num:4, title:"Операционная система как защитник пользователей и программ", content:`<div class="section"><h3>🛡️ Функции безопасности</h3><p>Если вычислительная система допускает совместную работу нескольких пользователей, возникает проблема организации их безопасной деятельности. Необходимо обеспечить сохранность информации на диске, чтобы никто не мог удалить или повредить чужие файлы, а также пресекать попытки несанкционированного использования системы.</p><ul><li><span class="emoji">🔒</span> <span class="highlight">Сохранность данных</span> — защита файлов от удаления/повреждения</li><li><span class="emoji">🚫</span> <span class="highlight">Предотвращение НСД</span> — не допускает несанкционированный доступ</li><li><span class="emoji">👮</span> <span class="highlight">Разграничение прав</span> — каждый пользователь имеет свой уровень доступа</li></ul></div><div class="block">🏛️ <strong>Аналогия:</strong> ОС — это государство со своими полицейскими и контрразведывательными функциями.</div>`},
-  {num:5, title:"Операционная система как постоянно функционирующее ядро", content:`<div class="section"><h3>🧬 Ядро ОС</h3><p>ОС можно определить как программу, которая <span class="highlight">постоянно работает</span> на компьютере и взаимодействует со всеми прикладными программами. Однако на практике постоянно работает только часть ОС — её <span class="highlight">ядро</span>. Ядро — это базовая часть, которая всегда находится в оперативной памяти и обеспечивает фундаментальные механизмы управления ресурсами.</p></div><div class="block">🔑 <strong>Главное:</strong> ядро всегда в памяти, остальные компоненты системы могут подгружаться по мере необходимости. Это повышает эффективность использования оперативной памяти.</div>`},
-  {num:6, title:"Основные понятия, концепции ОС. Системные вызовы", content:`<div class="section"><h3>🔌 Системные вызовы (System Calls)</h3><p>В любой ОС поддерживается механизм, позволяющий пользовательским программам обращаться к услугам ядра. <span class="highlight">Системные вызовы</span> — это интерфейс между ОС и пользовательской программой. Они создают, удаляют и используют различные объекты, главные из которых — процессы и файлы.</p></div><div class="section"><h3>⚙️ Механизм работы</h3><p>Пользовательская программа запрашивает сервис через библиотечные процедуры. Эти процедуры загружают машинные регистры параметрами и осуществляют прерывание процессора, после чего управление передаётся обработчику вызова, входящему в ядро ОС. При системном вызове задача переходит в <span class="highlight">привилегированный режим (kernel mode)</span>.</p><ul><li><span class="emoji">📚</span> Библиотеки делают системный вызов похожим на обычный вызов подпрограммы</li><li><span class="emoji">⚡</span> Используется команда <span class="highlight">программного прерывания</span> (<code class="code">INT</code>)</li><li><span class="emoji">🔄</span> Исполняется в контексте вызвавшей задачи</li><li><span class="emoji">💾</span> Ядро имеет полный доступ к памяти пользовательской программы</li><li><span class="emoji">🔵</span> Системный вызов — <span class="highlight">синхронное событие</span></li></ul></div>`},
-  {num:7, title:"Основные понятия, концепции ОС. Прерывания", content:`<div class="section"><h3>⚡ Аппаратные прерывания (Hardware Interrupts)</h3><p><span class="highlight">Прерывание</span> — это событие, генерируемое внешним по отношению к процессору устройством. Аппаратура информирует процессор о том, что произошло событие, требующее немедленной реакции, либо сообщает о завершении асинхронной операции ввода-вывода.</p></div><div class="section"><h3>📋 Примеры и характеристики</h3><ul><li><span class="emoji">⌨️</span> Пользователь нажал клавишу</li><li><span class="emoji">💿</span> Завершилось чтение с диска</li><li><span class="emoji">⏰</span> <span class="highlight">Прерывание таймера</span> — генерируется периодически, используется для планирования процессов</li></ul></div><div class="section"><h3>📌 Свойства</h3><ul><li><span class="emoji">🎲</span> <span class="highlight">Асинхронное</span> — возникает независимо от кода</li><li><span class="emoji">🔢</span> Каждый тип имеет номер (источник)</li><li><span class="emoji">👤</span> Обработка не зависит от текущего процесса</li></ul></div>`},
-  {num:8, title:"Основные понятия, концепции ОС. Исключительные ситуации", content:`<div class="section"><h3>⚠️ Исключения (Exceptions)</h3><p><span class="highlight">Исключительная ситуация</span> — событие при попытке выполнить команду, которая не может быть завершена. Примеры: доступ без привилегий, обращение к отсутствующей странице.</p></div><div class="section"><h3>🔀 Виды</h3><ul><li><span class="emoji">🟢</span> <span class="highlight">Исправимые</span> — после устранения причины программа продолжается (напр., отсутствие страницы в памяти)</li><li><span class="emoji">🔴</span> <span class="highlight">Неисправимые</span> — деление на ноль, ОС завершает процесс</li></ul></div><div class="section"><h3>📌 Свойства</h3><p>Исключения — <span class="highlight">синхронные события</span> (в контексте текущей задачи), в отличие от аппаратных прерываний.</p></div>`},
-  {num:9, title:"Основные понятия, концепции ОС. Файлы", content:`<div class="section"><h3>📁 Файл и файловая система</h3><p><span class="highlight">Файл</span> — именованная область данных на носителе. <span class="highlight">Файловая система</span> скрывает особенности ввода-вывода и даёт программисту простую абстрактную модель. Операции: создание, удаление, открытие, закрытие, чтение, запись — через системные вызовы. Понятия: каталог, корневой/текущий каталог, путь.</p></div>`},
-  {num:10, title:"Архитектурные особенности ОС. Монолитное ядро", content:`<div class="section"><h3>🏗️ Монолитное ядро (Monolithic Kernel)</h3><p>Все компоненты ОС — части единой программы, работающие в <span class="highlight">привилегированном режиме</span> и вызывающие друг друга напрямую.</p></div><div class="section"><h3>👍 / 👎</h3><ul><li><span class="emoji">✅</span> Высокая производительность (прямой вызов)</li><li><span class="emoji">❌</span> Нужна перекомпиляция для добавления компонентов</li><li><span class="emoji">❌</span> Ядро целиком в памяти</li><li><span class="emoji">❌</span> Ошибка любой части рушит всю систему</li></ul></div><div class="block">📌 <strong>Пример:</strong> <span class="highlight">Linux</span> — монолитное ядро с поддержкой динамических модулей.</div>`},
-  {num:11, title:"Архитектурные особенности ОС. Многоуровневые системы (Layered systems)", content:`<div class="section"><h3>🧅 Многоуровневая архитектура</h3><p>Система разбивается на уровни: уровень N вызывает только уровень N-1. Нижний — hardware, верхний — пользователь. Впервые реализована Дейкстрой в системе THE (1968).</p><ul><li><span class="emoji">✅</span> Хорошо тестируются (послойно)</li><li><span class="emoji">✅</span> Легко модифицируются</li><li><span class="emoji">❌</span> Менее эффективны из-за многослойности вызовов</li></ul></div>`},
-  {num:12, title:"Архитектурные особенности ОС. Виртуальные машины", content:`<div class="section"><h3>🎭 Виртуальные машины</h3><p>ОС создаёт каждому пользователю копию "голого железа" — виртуальную машину со своим CPU, памятью, устройствами. При привилегированной команде происходит системный вызов к реальной ОС. Пользователь может загрузить на ВМ свою ОС. Примеры: VMware, VirtualBox.</p></div>`},
-  {num:13, title:"Архитектурные особенности ОС. Микроядерная архитектура", content:`<div class="section"><h3>🧩 Микроядро (Microkernel)</h3><p>Большая часть кода ОС — на уровне пользователя. В микроядре только: передача сообщений, планирование CPU, обработка прерываний, базовая память.</p><ul><li><span class="emoji">✅</span> Высокая модульность, загрузка драйверов без перезагрузки</li><li><span class="emoji">✅</span> Выше надёжность (ошибка в драйвере не убьёт ядро)</li><li><span class="emoji">❌</span> Медленнее (передача сообщений)</li></ul></div>`},
-  {num:14, title:"Архитектурные особенности ОС. Смешанные системы", content:`<div class="section"><h3>🔄 Гибридный подход</h3><p>Современные ОС комбинируют подходы. <strong>Linux</strong> — монолитное ядро + модули. <strong>Windows NT / macOS (XNU)</strong> — гибридные ядра. <strong>MkLinux</strong> — Linux поверх микроядра Mach.</p></div>`},
-  {num:15, title:"Классификация ОС. Реализация многозадачности. Поддержка многопользовательского режима. Многопроцессорная обработка. Системы реального времени", content:`<div class="section"><h3>📊 Классификация</h3><ul><li>По числу задач: <span class="highlight">однозадачные</span> (MS-DOS) / <span class="highlight">многозадачные</span> (Unix, Windows) — вытесняющий режим</li><li>По числу пользователей: <span class="highlight">одно</span>/<span class="highlight">многопользовательские</span></li><li>Многопроцессорность: <span class="highlight">SMP</span> (симметричная) / <span class="highlight">ASMP</span> (асимметричная, master-slave)</li><li><span class="highlight">Реального времени</span> — предельное время реакции на событие</li></ul></div>`},
-  {num:16, title:"Понятие процесса", content:`<div class="section"><h3>📌 Процесс</h3><p><span class="highlight">Процесс</span> — программа в режиме выполнения. Содержит адресное пространство (код, данные, стек). Нет взаимно-однозначного соответствия между процессом и программой. В процессе может исполняться код ядра ОС.</p></div>`},
-  {num:17, title:"Состояния процесса", content:`<div class="section"><h3>🔄 Модель 3 состояний</h3><ul><li><span class="emoji">✅</span> <span class="highlight">Готовность (Ready)</span> — ждёт процессор</li><li><span class="emoji">▶️</span> <span class="highlight">Исполнение (Running)</span> — выполняется</li><li><span class="emoji">⏳</span> <span class="highlight">Ожидание (Waiting)</span> — ждёт события</li></ul></div><div class="block">🔄 Переходы: готовность → исполнение (планировщик) → ожидание (запрос) → готовность (событие).</div>`},
-  {num:18, title:"Операции над процессами и связанные с ними понятия. Набор операций", content:`<div class="section"><h3>🔄 Жизненный цикл</h3><p>Новый процесс → готовность. Планировщик выбирает → исполнение. Выход: завершение ОС, ожидание события, прерывание таймера (возврат в готовность).</p></div>`},
-  {num:19, title:"Операции над процессами и связанные с ними понятия. Process Control Block и контекст процесса", content:`<div class="section"><h3>📋 PCB</h3><p>Структура данных процесса: состояние, PC, регистры, данные планирования, учётные данные, устройства ввода-вывода. <span class="highlight">Контекст</span> = регистровый + системный + пользовательский.</p></div>`},
-  {num:20, title:"Операции над процессами и связанные с ними понятия. Одноразовые операции", content:`<div class="section"><h3>👪 Создание процесса</h3><p>Родитель (parent) → ребёнок (child). Два подхода: ребёнок = копия родителя (fork в Unix) или загружает новую программу (exec). Родитель может ждать или работать параллельно.</p></div>`},
-  {num:21, title:"Операции над процессами и связанные с ними понятия. Многоразовые операции", content:`<div class="section"><h3>🔄 Многоразовые операции</h3><p>Не меняют количество процессов. Запуск (восстановление контекста из PCB), приостановка (прерывание → сохранение в PCB), блокирование (системный вызов → ожидание), разблокирование (событие → готовность).</p></div>`},
-  {num:22, title:"Операции над процессами и связанные с ними понятия. Переключение контекста", content:`<div class="section"><h3>🔄 Context Switch</h3><p>Прерывание → приостановка текущего → разблокировка другого → запуск. ОС сохраняет контекст старого процесса в PCB и загружает контекст нового.</p></div>`},
-  {num:23, title:"Уровни планирования", content:`<div class="section"><h3>📊 Уровни</h3><ul><li><span class="highlight">Долгосрочное</span> (задания) — редко, минуты. Выбор задания для загрузки.</li><li><span class="highlight">Краткосрочное</span> (CPU) — каждые ~100мс. Выбор следующего процесса.</li></ul></div>`},
-  {num:24, title:"Критерии планирования и требования к алгоритмам", content:`<div class="section"><h3>🎯 Критерии</h3><ul><li>⚖️ Справедливость</li><li>💯 Эффективность (CPU 100%)</li><li>⏱️ Сокращение turnaround time</li><li>⏳ Сокращение waiting time</li><li>📞 Сокращение response time</li></ul></div><div class="section"><h3>📋 Требования</h3><p>Предсказуемость, минимальные накладные расходы, равномерная загрузка, масштабируемость.</p></div>`},
-  {num:25, title:"Параметры планирования", content:`<div class="section"><h3>📊 Параметры</h3><ul><li><span class="highlight">Статические</span> — не меняются (размер ОЗУ, число устройств)</li><li><span class="highlight">Динамические</span> — меняются (свободная память, загрузка)</li></ul></div><div class="section"><h3>⏲️ CPU burst и I/O burst</h3><p>Активность процесса = последовательность CPU burst (счёт) ↔ I/O burst (ожидание ввода-вывода).</p></div>`},
-  {num:26, title:"Вытесняющее и невытесняющее планирование", content:`<div class="section"><h3>🔀 Режимы</h3><ul><li><span class="highlight">Невытесняющее</span> — процесс занимает CPU сколько нужно. Просто, эффективно.</li><li><span class="highlight">Вытесняющее</span> — процесс может быть прерван таймером в любой момент. Используется в системах разделения времени.</li></ul></div>`},
-  {num:27, title:"Алгоритмы планирования. First-Come, First-Served (FCFS)", content:`<div class="section"><h3>🥇 FCFS</h3><p>Очередь FIFO. Новый процесс — в конец, выбор — из начала. Невытесняющее. Просто, но "эффект конвоя" — короткие процессы ждут длинных.</p></div>`},
-  {num:28, title:"Алгоритмы планирования. Round Robin (RR)", content:`<div class="section"><h3>🎡 Round Robin</h3><p>FCFS + вытеснение. Каждый процесс получает <span class="highlight">квант времени</span> (10-100 мс). Если не завершился — в конец очереди. Большой квант → FCFS. Малый → иллюзия n CPU.</p></div>`},
-  {num:29, title:"Алгоритмы планирования. Shortest-Job-First (SJF)", content:`<div class="section"><h3>📏 SJF</h3><p>Выбирается процесс с наименьшим CPU burst. Оптимален по среднему времени ожидания. Трудно предсказать burst. Возможно "голодание" длинных процессов.</p></div>`},
-  {num:30, title:"Алгоритмы планирования. Гарантированное планирование", content:`<div class="section"><h3>🎯 Гарантированное</h3><p>Для N пользователей — каждому ~1/N CPU. Коэффициент справедливости = CPU<sub>i</sub> / (T<sub>i</sub>/N). Квант — процессу с наименьшим коэффициентом. Недостаток: неизвестно поведение пользователей.</p></div>`},
-  {num:31, title:"Алгоритмы планирования. Приоритетное планирование", content:`<div class="section"><h3>🏆 Приоритеты</h3><p>Каждому процессу — числовой приоритет. Внутренние (вычисляются) и внешние (задаются). Вытесняющий или нет. Проблема: "голодание" низкоприоритетных. Решение — aging.</p></div>`},
-  {num:32, title:"Алгоритмы планирования. Многоуровневые очереди (Multilevel Queue)", content:`<div class="section"><h3>📚 Multilevel Queue</h3><p>Процессы делятся на группы, каждая — своя очередь со своим алгоритмом. Фоновые → FCFS, интерактивные → RR. Гибкость планирования.</p></div>`},
-  {num:33, title:"Алгоритмы планирования. Многоуровневые очереди с обратной связью (Multilevel Feedback Queue)", content:`<div class="section"><h3>🔄 Multilevel Feedback Queue</h3><p>Процесс может мигрировать между очередями. Короткие процессы обрабатываются быстро, длинные не голодают. Наиболее общий подход.</p></div>`},
-  {num:34, title:"Взаимодействующие процессы", content:`<div class="section"><h3>🤝 Кооперация процессов</h3><p>Причины: повышение скорости, совместные данные, модульность, удобство. Процессы изолированы — нужны специальные механизмы ОС для взаимодействия.</p></div>`},
-  {num:35, title:"Категории средств обмена информацией", content:`<div class="section"><h3>📊 3 категории</h3><ul><li><span class="emoji">🔔</span> <span class="highlight">Сигнальные</span> — 1 бит</li><li><span class="emoji">🔗</span> <span class="highlight">Канальные</span> — линии связи</li><li><span class="emoji">💾</span> <span class="highlight">Разделяемая память</span> — общая область</li></ul></div>`},
-  {num:36, title:"Логическая организация механизма передачи информации. Как устанавливается связь?", content:`<div class="section"><h3>🔗 Адресация</h3><ul><li><span class="highlight">Прямая:</span> симметричная (оба знают друг друга) и асимметричная</li><li><span class="highlight">Непрямая:</span> через почтовый ящик</li></ul></div>`},
-  {num:37, title:"Логическая организация механизма передачи информации. Информационная валентность процессов и средств связи", content:`<div class="section"><h3>🔁 Направленность</h3><ul><li>➡️ Симплексная (одна сторона)</li><li>↔️ Полудуплексная (по очереди)</li><li>🔄 Дуплексная (одновременно)</li></ul></div>`},
-  {num:38, title:"Логическая организация механизма передачи информации. Особенности передачи информации с помощью линий связи", content:`<div class="section"><h3>💬 Линии связи</h3><p>Типы буфера: нулевой, ограниченной ёмкости, неограниченной. Модели: потоковая (stream) и сообщения. Безопаснее разделяемой памяти, информативнее сигналов.</p></div>`},
-  {num:39, title:"Логическая организация механизма передачи информации. Надежность средств связи", content:`<div class="section"><h3>✅ Надёжность</h3><p>4 условия: без потерь, без повреждений, без лишней информации, сохранение порядка. Механизмы: контрольные суммы, ACK, тайм-аут, нумерация, ECC.</p></div>`},
-  {num:40, title:"Нити исполнения", content:`<div class="section"><h3>🧵 Нити (Threads)</h3><p>Разделяют код, данные, ресурсы процесса. У каждой — свой PC, регистры, стек. Поддержка: на уровне ядра или на уровне библиотек.</p></div>`},
-  {num:41, title:"Interleaving, race condition и взаимоисключения", content:`<div class="section"><h3>🏁 Race Condition</h3><p>Недетерминированный результат из-за чередования операций. <span class="highlight">Взаимоисключение</span> — способ устранения: каждый процесс получает эксклюзивный доступ к разделяемым данным.</p></div>`},
-  {num:42, title:"Критическая секция", content:`<div class="section"><h3>⚠️ Critical Section</h3><p>Часть программы, где возможен race condition. Структура: пролог → критическая секция → эпилог → остальное. В каждый момент — только один процесс в своей КС.</p></div>`},
-  {num:43, title:"Программные алгоритмы организации взаимодействия процессов. Требования, предъявляемые к алгоритмам", content:`<div class="section"><h3>📋 5 требований</h3><ol><li>Программное решение</li><li>Без предположений о скоростях/числе CPU</li><li>Взаимоисключение</li><li>Прогресс</li><li>Ограниченное ожидание</li></ol></div>`},
-  {num:44, title:"Программные алгоритмы организации взаимодействия процессов. Запрет прерываний. Переменная-замок", content:`<div class="section"><h3>🚫 Запрет прерываний</h3><p>Просто, но опасно — пользователь управляет прерываниями. Используется только внутри ядра.</p></div><div class="section"><h3>🔒 Переменная-замок</h3><p>Проблема: while(lock); lock=1 — не атомарно! Два процесса могут войти в КС.</p></div>`},
-  {num:45, title:"Программные алгоритмы организации взаимодействия процессов. Строгое чередование. Флаги готовности", content:`<div class="section"><h3>🔄 Строгое чередование</h3><p>Есть взаимоисключение, но нарушен прогресс (P0 ждёт, пока P1 не войдёт, даже если P1 не хочет).</p></div><div class="section"><h3>🏴 Флаги готовности</h3><p>Есть взаимоисключение, но возможен deadlock (оба ready=1 → ждут друг друга).</p></div>`},
-  {num:46, title:"Программные алгоритмы организации взаимодействия процессов. Алгоритм Петерсона", content:`<div class="section"><h3>✅ Алгоритм Петерсона</h3><p>Первое корректное решение для 2 процессов. ready[i]=1; turn=1-i; while(ready[1-i] && turn==1-i); Удовлетворяет всем 5 требованиям.</p></div>`},
-  {num:47, title:"Программные алгоритмы организации взаимодействия процессов. Алгоритм булочной (Bakery algorithm)", content:`<div class="section"><h3>🍞 Алгоритм булочной</h3><p>Решение для N процессов. Каждый получает номер-талончик. Приоритет: (number, id). При совпадении номера — сравнивается ID.</p></div>`},
-  {num:48, title:"Программные алгоритмы организации взаимодействия процессов. Аппаратная поддержка взаимоисключений", content:`<div class="section"><h3>🔧 Аппаратная поддержка</h3><p>Атомарные команды: Test-and-Set (проверить и установить), Swap (обменять). Упрощают реализацию взаимоисключения.</p></div>`},
-  {num:49, title:"Семафоры. Концепция семафоров", content:`<div class="section"><h3>🚦 Семафоры (Dijkstra, 1965)</h3><p>Целая неотрицательная переменная. Операции: P (proberen — проверять, блокировка если 0) и V (verhogen — увеличивать). Атомарны.</p></div>`},
-  {num:50, title:"Семафоры. Решение проблемы producer-consumer с помощью семафоров", content:`<div class="section"><h3>📦 Producer-Consumer</h3><p>3 семафора: mutex (1), empty (N), full (0). Producer: P(empty)→P(mutex)→put→V(mutex)→V(full). Consumer: P(full)→P(mutex)→get→V(mutex)→V(empty).</p></div>`},
-  {num:51, title:"Мониторы", content:`<div class="section"><h3>👁️ Мониторы</h3><p>Тип данных с методами. Только 1 процесс активен внутри. Условные переменные: wait (блокировка) и signal (пробуждение). Отличие от семафоров: не помнят предысторию.</p></div>`},
-  {num:52, title:"Сообщения", content:`<div class="section"><h3>✉️ Передача сообщений</h3><p>Примитивы send/receive. Прямая и непрямая адресация. Встроенное взаимоисключение. Медленнее семафоров в пределах одного компьютера.</p></div>`},
-  {num:53, title:"Тупики", content:`<div class="section"><h3>🔒 Deadlock</h3><p>Процесс ждёт события, которое не произойдёт. Пример: A захватил ленту и ждёт принтер, B — наоборот. Причины: конкуренция за ресурсы, блокировки БД, ошибки программирования.</p></div>`},
-  {num:54, title:"Условия возникновения тупиков", content:`<div class="section"><h3>📋 4 условия Коффмана</h3><ol><li>Взаимоисключение</li><li>Ожидание ресурсов (Hold and Wait)</li><li>Неперераспределяемость (No Preemption)</li><li>Круговое ожидание (Circular Wait)</li></ol><p>Необходимы и достаточны.</p></div>`},
-  {num:55, title:"Основные направления борьбы с тупиками. Игнорирование проблемы тупиков", content:`<div class="section"><h3>🙈 Игнорирование</h3><p>Unix, Windows не используют сложные механизмы — считают тупики редкими. Маловероятный тупик лучше неудобных ограничений.</p></div>`},
-  {num:56, title:"Основные направления борьбы с тупиками. Способы предотвращения тупиков. Алгоритм банкира", content:`<div class="section"><h3>🏦 Алгоритм банкира</h3><p>Выделение ресурсов только если новое состояние — безопасное (safe state). Требует знания максимальных потребностей. Не нужен откат, но жёсткие требования.</p></div>`},
-  {num:57, title:"Основные направления борьбы с тупиками. Предотвращение тупиков за счет нарушения условий возникновения тупиков", content:`<div class="section"><h3>🔨 4 способа</h3><ul><li>Нарушение взаимоисключения: спулинг</li><li>Нарушение ожидания: двухфазный захват</li><li>Нарушение неперераспределяемости: отбор ресурсов</li><li>Нарушение кругового ожидания: нумерация ресурсов</li></ul></div>`},
-  {num:58, title:"Основные направления борьбы с тупиками. Обнаружение тупиков", content:`<div class="section"><h3>🔍 Обнаружение</h3><p>Проверка цикла в графе ресурсов. Если есть цикл при выполнении первых 3 условий — тупик. Нужны формальные алгоритмы для компьютера.</p></div>`},
-  {num:59, title:"Основные направления борьбы с тупиками. Восстановление после тупиков", content:`<div class="section"><h3>🔧 Восстановление</h3><ul><li>💀 Завершение одного или нескольких процессов</li><li>🔄 Откат (rollback) до контрольной точки</li><li>📍 Контрольные точки (checkpoints) для сохранения состояния</li></ul></div>`}
+var tickets = [
+  {num:1, title:"Понятие «Операционная система»", content:'<div class="section"><h3>💻 Определение ОС</h3><p><span class="highlight">Операционная система</span> — комплекс взаимосвязанных программ для управления ресурсами компьютера и организации взаимодействия с пользователем. Состоит из <span class="highlight">технической</span> (устройства) и <span class="highlight">программной</span> (ПО) частей.</p></div><div class="section"><h3>🎭 ОС как виртуальная машина</h3><p>ОС скрывает сложность аппаратуры, предоставляя упрощённый интерфейс. Программист вызывает <code class="code">read(file)</code> вместо управления двигателями и головками диска.</p></div><div class="section"><h3>📊 ОС как менеджер ресурсов</h3><p>Распределяет процессор, память, устройства между программами. Предотвращает хаос (очереди на печать, буферизация).</p></div><div class="section"><h3>🛡️ ОС как защитник</h3><p>Обеспечивает сохранность данных, разграничение доступа, предотвращает несанкционированное использование.</p></div><div class="section"><h3>🧬 ОС как ядро</h3><p>Постоянно работает только <span class="highlight">ядро</span> — базовая часть, всегда в памяти.</p></div><div class="block">📌 <strong>Слои ПО:</strong> аппаратура → ядро ОС → утилиты → прикладные программы → пользователь.</div>'},
+  {num:2, title:"Основные понятия, концепции ОС. Прерывания. Исключительные ситуации. Файлы. Системные вызовы", content:'<div class="section"><h3>🔌 Системные вызовы (System Calls)</h3><p>Интерфейс между ОС и программой. Программа → библиотека → загрузка регистров → <code class="code">INT</code> → переход в <span class="highlight">kernel mode</span>. Синхронное событие.</p></div><div class="section"><h3>⚡ Аппаратные прерывания</h3><p>Событие от внешнего устройства к процессору. <span class="highlight">Асинхронные</span>. Примеры: клавиатура, диск, таймер (используется для планирования).</p></div><div class="section"><h3>⚠️ Исключения (Exceptions)</h3><p>При невозможности выполнить команду. <span class="highlight">Синхронные</span>. Исправимые (отсутствие страницы) и неисправимые (деление на 0).</p></div><div class="section"><h3>📁 Файлы</h3><p>Именованная область данных на носителе. Файловая система скрывает особенности ввода-вывода. Операции: create, delete, open, close, read, write.</p></div>'},
+  {num:3, title:"Архитектурные особенности ОС", content:'<div class="section"><h3>🏗️ Монолитное ядро</h3><p>Одна большая программа. Все компоненты в привилегированном режиме. Прямой вызов процедур — быстро. Недостаток: перекомпиляция для изменений. Пример: <span class="highlight">Linux</span>.</p></div><div class="section"><h3>🧅 Многоуровневые системы</h3><p>Уровень N → только N-1. Нижний — hardware, верхний — пользователь. Хорошо тестируются, но менее эффективны. Впервые: THE (Дейкстра, 1968).</p></div><div class="section"><h3>🎭 Виртуальные машины</h3><p>Копия всего hardware для пользователя. Привилегированные команды → системный вызов к реальной ОС. Примеры: VMware, VirtualBox.</p></div><div class="section"><h3>🧩 Микроядро</h3><p>Большинство компонентов — на уровне пользователя. В ядре: сообщения, планирование, прерывания, память. Модульно, надёжно, но медленнее.</p></div><div class="section"><h3>🔄 Смешанные системы</h3><p>Linux (монолитное + модули), Windows NT (гибрид), macOS XNU, MkLinux.</p></div>'},
+  {num:4, title:"Классификация ОС", content:'<div class="section"><h3>📊 По числу задач</h3><ul><li>Однозадачные (MS-DOS)</li><li><span class="highlight">Многозадачные</span> (Unix, Windows) — вытесняющий режим (preemptive)</li></ul></div><div class="section"><h3>👥 По числу пользователей</h3><ul><li>Однопользовательские</li><li><span class="highlight">Многопользовательские</span> (Unix, Windows NT)</li></ul></div><div class="section"><h3>🖥️ По числу процессоров</h3><ul><li><span class="highlight">SMP</span> (симметричные) — равные процессоры</li><li><span class="highlight">ASMP</span> (асимметричные) — master + slave</li></ul></div><div class="section"><h3>⏱️ Реального времени</h3><p>Предельно допустимое время реакции на событие.</p></div>'},
+  {num:5, title:"Понятие процесса", content:'<div class="section"><h3>📌 Процесс</h3><p><span class="highlight">Процесс</span> — программа в режиме выполнения. Адресное пространство: код, данные, стек. Нет взаимно-однозначного соответствия между процессом и программой. Процессом управляет ОС, в нём может исполняться код ядра.</p></div>'},
+  {num:6, title:"Состояния процесса", content:'<div class="section"><h3>🔄 3 состояния</h3><ul><li><span class="highlight">Готовность (Ready)</span> — ждёт процессор</li><li><span class="highlight">Исполнение (Running)</span> — выполняется</li><li><span class="highlight">Ожидание (Waiting/Blocked)</span> — ждёт события</li></ul></div><div class="block">🔄 Переходы: готовность → исполнение (планировщик) → ожидание (запрос ресурса) → готовность (событие).</div>'},
+  {num:7, title:"Операции над процессами и связанные с ними понятия", content:'<div class="section"><h3>👪 Создание</h3><p><span class="highlight">Родитель (parent)</span> → <span class="highlight">ребёнок (child)</span>. В Unix: <code class="code">fork()</code> (копия) + <code class="code">exec()</code> (замена программы).</p></div><div class="section"><h3>📋 PCB (Process Control Block)</h3><p>Структура с состоянием, PC, регистрами, данными планирования, учётом, устройствами.</p></div><div class="section"><h3>🧩 Контекст процесса</h3><ul><li><span class="highlight">Регистровый</span> — содержимое регистров</li><li><span class="highlight">Системный</span> — данные PCB</li><li><span class="highlight">Пользовательский</span> — код и данные</li></ul></div><div class="section"><h3>🔄 Многоразовые операции</h3><p>Запуск (восстановление из PCB), приостановка (прерывание → сохранение), блокировка (системный вызов → ожидание), разблокировка (событие → готовность), переключение контекста.</p></div>'},
+  {num:8, title:"Уровни планирования", content:'<div class="section"><h3>📊 Уровни</h3><ul><li><span class="highlight">Долгосрочное</span> (планирование заданий) — редко, минуты. Выбирает задание для загрузки.</li><li><span class="highlight">Краткосрочное</span> (планирование CPU) — каждые ~100 мс. Выбирает следующий процесс.</li></ul></div>'},
+  {num:9, title:"Критерии планирования и требования к алгоритмам", content:'<div class="section"><h3>🎯 Критерии</h3><ul><li>⚖️ Справедливость</li><li>💯 Эффективность (CPU 100%)</li><li>⏱️ Сокращение turnaround time</li><li>⏳ Сокращение waiting time</li><li>📞 Сокращение response time</li></ul></div><div class="section"><h3>📋 Требования</h3><p>Предсказуемость, минимальные накладные расходы, равномерная загрузка, масштабируемость.</p></div>'},
+  {num:10, title:"Параметры планирования", content:'<div class="section"><h3>📊 Параметры</h3><ul><li><span class="highlight">Статические</span> — размер ОЗУ, число устройств (не меняются)</li><li><span class="highlight">Динамические</span> — свободная память, загрузка (меняются)</li></ul></div><div class="section"><h3>⏲️ CPU burst и I/O burst</h3><p>Процесс = последовательность CPU burst (счёт) ↔ I/O burst (ожидание ввода-вывода).</p></div>'},
+  {num:11, title:"Вытесняющее и невытесняющее планирование", content:'<div class="section"><h3>🔀 Режимы</h3><ul><li><span class="highlight">Невытесняющее</span> — процесс занимает CPU сколько нужно. Нет переключений до добровольной отдачи.</li><li><span class="highlight">Вытесняющее</span> — процесс прерывается таймером (квант времени). Используется в системах разделения времени.</li></ul></div>'},
+  {num:12, title:"Алгоритмы планирования. FCFS. Round Robin (RR)", content:'<div class="section"><h3>🥇 FCFS (First-Come, First-Served)</h3><p>Очередь FIFO. Невытесняющее. Просто, но "эффект конвоя" — короткие процессы ждут длинных.</p></div><div class="section"><h3>🎡 Round Robin (RR)</h3><p>FCFS + вытеснение. Каждый процесс — <span class="highlight">квант времени</span> (10–100 мс). Если не завершился → в конец очереди. Большой квант → FCFS, малый → иллюзия n CPU.</p></div>'},
+  {num:13, title:"Алгоритмы планирования. Многоуровневые очереди (Multilevel Queue)", content:'<div class="section"><h3>📚 Multilevel Queue</h3><p>Процессы делятся на группы, каждая — своя очередь с алгоритмом. Фоновые → FCFS, интерактивные → RR. Внутри очереди — фиксированные приоритеты.</p></div>'},
+  {num:14, title:"Алгоритмы планирования. Многоуровневые очереди с обратной связью (Multilevel Feedback Queue)", content:'<div class="section"><h3>🔄 Multilevel Feedback Queue</h3><p>Процесс мигрирует между очередями. Короткие процессы — быстро, длинные — не голодают. Новый → очередь 0 (квант 8), затем 1 (16), 2 (32), 3 (FCFS). Наиболее гибкий подход.</p></div>'},
+  {num:15, title:"Алгоритмы планирования. Приоритетное планирование", content:'<div class="section"><h3>🏆 Приоритетное планирование</h3><p>Каждому процессу — числовой приоритет. Внутренние (вычисляются) и внешние (задаются). Вытесняющее или нет. Проблема: "голодание" низкоприоритетных. Решение — <span class="highlight">aging</span> (повышение приоритета со временем).</p></div>'},
+  {num:16, title:"Взаимодействующие процессы", content:'<div class="section"><h3>🤝 Кооперация</h3><p>Причины: повышение скорости (пока один ждёт, другой работает), совместные данные, модульность (микроядро), удобство. Процессы изолированы — нужны механизмы ОС. <span class="highlight">Кооперативные</span> — влияют друг на друга через обмен информацией.</p></div>'},
+  {num:17, title:"Категории средств обмена информацией", content:'<div class="section"><h3>📊 3 категории</h3><ul><li><span class="emoji">🔔</span> <span class="highlight">Сигнальные</span> — 1 бит, извещение о событии</li><li><span class="emoji">🔗</span> <span class="highlight">Канальные</span> — линии связи (ограниченная пропускная способность)</li><li><span class="emoji">💾</span> <span class="highlight">Разделяемая память</span> — общая область (максимум возможностей)</li></ul></div>'},
+  {num:18, title:"Особенности передачи информации с помощью линий связи", content:'<div class="section"><h3>💬 Линии связи</h3><p>Безопаснее разделяемой памяти, информативнее сигналов. Подходят для связи на разных компьютерах.</p></div><div class="section"><h3>📦 Типы буфера</h3><ul><li><span class="highlight">Нулевой</span> — отправитель ждёт получателя</li><li><span class="highlight">Ограниченный</span> — буфер размера n</li><li><span class="highlight">Неограниченный</span> — отправитель никогда не ждёт</li></ul></div><div class="section"><h3>📋 Модели</h3><ul><li>🌊 Потоковая (stream) — поток байт</li><li>✉️ Сообщения (messages) — дискретные сообщения</li></ul></div>'},
+  {num:19, title:"Надежность средств связи", content:'<div class="section"><h3>✅ 4 условия</h3><ul><li>Нет потери, повреждения, лишней информации, сохранение порядка</li></ul></div><div class="section"><h3>🛡️ Механизмы</h3><ul><li>Контрольные суммы — проверка целостности</li><li>Подтверждение (ACK) — получатель подтверждает приём</li><li>Тайм-аут + повтор — если ACK не пришёл</li><li>Нумерация — порядок и защита от дублирования</li><li>Коды, исправляющие ошибки (ECC)</li></ul></div>'},
+  {num:20, title:"Нити исполнения", content:'<div class="section"><h3>🧵 Нити (Threads)</h3><p>Разделяют код, данные, ресурсы процесса. У каждой — свой PC, регистры, стек. Пока одна нить заблокирована, другая может работать.</p></div><div class="section"><h3>⚙️ Состояния</h3><p>Процесс в готовности — хотя бы одна нить готова. В исполнении — одна нить исполняется. В ожидании — все нити заблокированы.</p></div><div class="section"><h3>💻 Поддержка</h3><ul><li>На уровне <span class="highlight">ядра</span> — планирование в терминах нитей</li><li>На уровне <span class="highlight">библиотек</span> — пользовательские нити</li></ul></div>'},
+  {num:21, title:"Interleaving, race condition и взаимоисключения", content:'<div class="section"><h3>🔄 Interleaving</h3><p>Атомарные операции активностей чередуются разными способами → разный результат.</p></div><div class="section"><h3>🏁 Race Condition</h3><p>Недетерминированный набор — результат зависит от порядка чередования. Процессы "состязаются".</p></div><div class="section"><h3>🔒 Взаимоисключение (Mutual Exclusion)</h3><p>Каждый процесс получает эксклюзивный доступ к разделяемым данным — исключает одновременное использование.</p></div>'},
+  {num:22, title:"Критическая секция", content:'<div class="section"><h3>⚠️ Critical Section</h3><p>Часть программы, где возможен race condition. В каждый момент — только один процесс в КС. Структура: <span class="highlight">entry section</span> → <strong>critical section</strong> → <span class="highlight">exit section</span> → remainder.</p></div>'},
+  {num:23, title:"Программные алгоритмы организации взаимодействия процессов. Требования, предъявляемые к алгоритмам", content:'<div class="section"><h3>📋 5 требований</h3><ol><li>Только программное решение (без спецкоманд)</li><li>Без предположений о скоростях процессов или числе CPU</li><li><span class="highlight">Взаимоисключение</span></li><li><span class="highlight">Прогресс</span> — процессы вне КС не блокируют вход</li><li><span class="highlight">Ограниченное ожидание</span> — нет голодания</li></ol></div>'},
+  {num:24, title:"Программные алгоритмы. Запрет прерываний. Строгое чередование. Флаги готовности", content:'<div class="section"><h3>🚫 Запрет прерываний</h3><p>Простое решение: запретить прерывания → КС → разрешить. Но пользователь не должен управлять прерываниями! Только в ядре.</p></div><div class="section"><h3>🔄 Строгое чередование</h3><p>Переменная turn. Есть взаимоисключение, но нарушен <span class="highlight">прогресс</span> — процесс ждёт своей очереди, даже если другой не хочет входить.</p></div><div class="section"><h3>🏴 Флаги готовности</h3><p>Массив ready[]. Есть взаимоисключение, но возможен <span class="highlight">deadlock</span> — оба ready=1 и ждут друг друга.</p></div>'},
+  {num:25, title:"Программные алгоритмы организации взаимодействия процессов. Алгоритм Петерсона", content:'<div class="section"><h3>✅ Алгоритм Петерсона (1981)</h3><p>Корректное решение для 2 процессов. Идея: ready[i]=1; turn=1-i; while(ready[1-i] && turn==1-i);</p><p>Удовлетворяет всем 5 требованиям. Если оба подошли одновременно — оба заявят готовность, предложат друг другу, один пройдёт.</p></div>'},
+  {num:26, title:"Алгоритм булочной (Bakery algorithm)", content:'<div class="section"><h3>🍞 Алгоритм булочной (Lamport)</h3><p>Решение для N процессов. Каждый получает номер-талончик. При совпадении номеров — сравнивается ID процесса: <code class="code">(number[j],j) < (number[i],i)</code>. Процесс ждёт, пока не наступит его очередь.</p></div>'},
+  {num:27, title:"Аппаратная поддержка взаимоисключений", content:'<div class="section"><h3>🔧 Аппаратные атомарные операции</h3><ul><li><span class="highlight">Test-and-Set</span> — проверить и установить за одну операцию</li><li><span class="highlight">Swap</span> — обменять два значения атомарно</li></ul><p>Упрощают реализацию взаимоисключения, повышают эффективность.</p></div>'},
+  {num:28, title:"Семафоры", content:'<div class="section"><h3>🚦 Семафоры (Dijkstra, 1965)</h3><p>Целая неотрицательная переменная. Доступ — только через атомарные операции:</p><ul><li><span class="highlight">P(S)</span> (proberen) — пока S==0: блокировка; S=S-1</li><li><span class="highlight">V(S)</span> (verhogen) — S=S+1</li></ul><p>Применение: взаимоисключение (мьютекс=1), синхронизация, producer-consumer.</p></div>'},
+  {num:29, title:"Решение проблемы producer-consumer с помощью семафоров", content:'<div class="section"><h3>📦 Producer-Consumer</h3><p>Производитель кладёт данные в буфер, потребитель извлекает. 3 семафора:</p><pre class="block" style="font-family:monospace;white-space:pre-wrap">Semaphore mutex = 1;   // взаимоисключение Semaphore empty = N;   // свободные места Semaphore full = 0;    // занятые места Producer: P(empty)→P(mutex)→put→V(mutex)→V(full) Consumer: P(full)→P(mutex)→get→V(mutex)→V(empty)</pre></div>'},
+  {num:30, title:"Мониторы", content:'<div class="section"><h3>👁️ Мониторы</h3><p>Тип данных для ООП. В любой момент только 1 процесс активен внутри (встроенное взаимоисключение). Условные переменные: <code class="code">wait</code> (блокировка) и <code class="code">signal</code> (пробуждение). В отличие от семафоров — не помнят предысторию (signal без wait теряется).</p></div>'},
+  {num:31, title:"Тупики", content:'<div class="section"><h3>🔒 Deadlock</h3><p>Процесс ждёт события, которое никогда не произойдёт. Пример: A захватил ленту и ждёт принтер, B — наоборот. Причины: конкуренция за ресурсы, блокировки БД, ошибки программирования. Последовательность: запрос → использование → освобождение.</p></div>'},
+  {num:32, title:"Условия возникновения тупиков", content:'<div class="section"><h3>📋 4 условия Коффмана</h3><ol><li><span class="highlight">Взаимоисключение</span> — ресурс может использовать только 1 процесс</li><li><span class="highlight">Ожидание ресурсов</span> (Hold and Wait) — процесс удерживает ресурсы и запрашивает новые</li><li><span class="highlight">Неперераспределяемость</span> (No Preemption) — ресурс нельзя отобрать принудительно</li><li><span class="highlight">Круговое ожидание</span> (Circular Wait) — кольцевая цепь ожидания</li></ol><p>Все 4 необходимы и достаточны.</p></div>'},
+  {num:33, title:"Основные направления борьбы с тупиками", content:'<div class="section"><h3>📋 Направления</h3><ol><li><span class="highlight">Игнорирование</span> — Windows, Unix так и делают (тупик редок)</li><li><span class="highlight">Предотвращение</span> — алгоритм банкира (безопасные состояния); нарушение условий (спулинг, двухфазный захват, нумерация ресурсов)</li><li><span class="highlight">Обнаружение</span> — поиск цикла в графе ресурсов</li><li><span class="highlight">Восстановление</span> — завершение процессов, откат, checkpoint</li></ol></div>'},
+  {num:34, title:"Обнаружение тупиков", content:'<div class="section"><h3>🔍 Обнаружение</h3><p>Проверка <span class="highlight">цикла</span> в графе распределения ресурсов. Если есть цикл при выполнении первых 3 условий Коффмана — тупик. Визуально цикл виден, но нужны формальные алгоритмы для компьютера.</p></div>'},
+  {num:35, title:"Восстановление после тупиков", content:'<div class="section"><h3>🔧 Восстановление</h3><ul><li>💀 <span class="highlight">Завершение процессов</span> — убить один или несколько, освободив ресурсы. Лучше идемпотентные.</li><li>🔄 <span class="highlight">Откат (rollback)</span> — забрать ресурс, передать, вернуть. Не для всех ресурсов.</li><li>📍 <span class="highlight">Контрольные точки</span> — периодическое сохранение состояния.</li></ul></div>'},
+  {num:36, title:"Физическая организация памяти компьютера", content:'<div class="section"><h3>🧠 Физическая память</h3><p>Иерархия: регистры CPU → кэш L1/L2/L3 → оперативная память (RAM) → диск. Чем ближе к процессору — тем быстрее и дороже. ОС управляет распределением физической памяти между процессами.</p></div>'},
+  {num:37, title:"Логическая память", content:'<div class="section"><h3>📐 Логическая память</h3><p>Адресное пространство процесса — <span class="highlight">логические адреса</span>, которые процесс "видит". Они могут не совпадать с физическими. ОС транслирует логические адреса в физические через блок управления памятью (MMU).</p></div>'},
+  {num:38, title:"Связывание адресов", content:'<div class="section"><h3>🔗 Связывание адресов</h3><p>Преобразование логических адресов в физические может происходить на этапах: компиляции (статический), загрузки, выполнения (динамический — наиболее гибкий). MMU (Memory Management Unit) выполняет трансляцию на лету.</p></div>'},
+  {num:39, title:"Простейшие схемы управления памятью", content:'<div class="section"><h3>📋 Схемы</h3><ul><li><span class="highlight">Однонепрерывное распределение</span> — одна программа в памяти</li><li><span class="highlight">Фиксированные разделы</span> — память делится на разделы фиксированного размера</li><li><span class="highlight">Динамические разделы</span> — разделы создаются по запросу (внешняя фрагментация)</li><li><span class="highlight">Свопинг</span> — выгрузка процесса на диск и загрузка другого</li></ul></div>'},
+  {num:40, title:"Страничная память", content:'<div class="section"><h3>📄 Страничная память (Paging)</h3><p>Физическая память делится на <span class="highlight">кадры (frames)</span> одинакового размера. Логическая — на <span class="highlight">страницы (pages)</span> того же размера. Таблица страниц отображает страницы в кадры. Нет внешней фрагментации.</p></div>'},
+  {num:41, title:"Сегментная и сегментно-страничная организация памяти", content:'<div class="section"><h3>📦 Сегментная память</h3><p>Память делится на <span class="highlight">сегменты</span> разного размера (код, данные, стек). Сегменты видны программисту. Есть внешняя фрагментация.</p></div><div class="section"><h3>🔀 Сегментно-страничная</h3><p>Комбинация: программа делится на сегменты, каждый сегмент — на страницы. Преимущества обоих подходов: логическое деление + отсутствие внешней фрагментации.</p></div>'},
+  {num:42, title:"Понятие виртуальной памяти", content:'<div class="section"><h3>💭 Виртуальная память</h3><p>Механизм, позволяющий выполнять процессы, размер которых превышает доступную физическую память. Часть страниц — в памяти, часть — на диске (в области подкачки / swap). При обращении к отсутствующей странице — <span class="highlight">страничное прерывание (page fault)</span>.</p></div>'},
+  {num:43, title:"Архитектурные средства поддержки виртуальной памяти", content:'<div class="section"><h3>🔧 Аппаратная поддержка</h3><ul><li><span class="highlight">MMU</span> (Memory Management Unit) — преобразует виртуальные адреса в физические</li><li><span class="highlight">TLB</span> (Translation Lookaside Buffer) — быстрый кэш для таблицы страниц</li><li>Бит присутствия в записи таблицы страниц (указывает, в памяти страница или на диске)</li><li>Бит обращения/изменения для алгоритмов замещения</li></ul></div>'},
+  {num:44, title:"Структура таблицы страниц", content:'<div class="section"><h3>📋 Таблица страниц</h3><p>Каждая запись содержит: номер кадра, бит присутствия, бит обращения, бит изменения, флаги защиты. Для 32-бит адресации может быть ~1 млн записей — хранится в памяти. Многоуровневые таблицы (2-3 уровня) экономят память.</p></div>'},
+  {num:45, title:"Ассоциативная память", content:'<div class="section"><h3>⚡ TLB (Translation Lookaside Buffer)</h3><p>Ассоциативная память — быстрый кэш для таблицы страниц внутри CPU. Хранит недавно использованные трансляции (виртуальный адрес → физический). Поиск по содержимому, а не по адресу. Ускоряет трансляцию в ~100 раз.</p></div>'},
+  {num:46, title:"Исключительные ситуации при работе с памятью", content:'<div class="section"><h3>⚠️ Page Fault (страничное прерывание)</h3><p>Возникает при обращении к странице, отсутствующей в памяти. ОС: 1) ищет свободный кадр; 2) загружает страницу с диска; 3) обновляет таблицу страниц; 4) возобновляет процесс. Если нет свободного кадра — применяется алгоритм замещения.</p></div>'},
+  {num:47, title:"Стратегии управления страничной памятью", content:'<div class="section"><h3>📊 Стратегии</h3><ul><li><span class="highlight">Подкачка (fetch)</span> — когда загружать страницу: по запросу (demand paging) или заранее (prepaging)</li><li><span class="highlight">Размещение (placement)</span> — куда помещать страницу</li><li><span class="highlight">Замещение (replacement)</span> — какую страницу выгружать, когда память полна</li></ul></div>'},
+  {num:48, title:"Алгоритмы замещения страниц", content:'<div class="section"><h3>🔄 Алгоритмы замещения</h3><ul><li><span class="highlight">FIFO</span> — выгружается самая старая страница (простой,但 anomaly Белади)</li><li><span class="highlight">LRU</span> (Least Recently Used) — выгружается давно не использовавшаяся (хорошая производительность)</li><li><span class="highlight">Оптимальный</span> — выгружается та, что не понадобится дольше всех (теоретический минимум)</li><li><span class="highlight">Clock / Second Chance</span> — приближение LRU с битом обращения</li></ul></div>'},
+  {num:49, title:"Управление количеством страниц, выделенных процессу. Модель рабочего множества", content:'<div class="section"><h3>📐 Working Set Model</h3><p><span class="highlight">Рабочее множество</span> — набор страниц, которые процесс активно использует в данный момент. Если процессу выделено меньше страниц, чем размер рабочего множества — частые page faults (thrashing). ОС должна выделять процессу столько страниц, сколько в его рабочем множестве.</p></div>'},
+  {num:50, title:"Страничные демоны", content:'<div class="section"><h3>👹 Страничные демоны</h3><p>Фоновый процесс (page daemon), который периодически проверяет количество свободных кадров. Если их мало — демон заранее выгружает страницы (используя алгоритм замещения), поддерживая резерв свободных кадров. Встречается в Unix/Linux (kswapd).</p></div>'},
+  {num:51, title:"Общие сведения о файлах", content:'<div class="section"><h3>📁 Файлы</h3><p><span class="highlight">Файл</span> — именованная последовательность байтов на внешнем носителе. Атрибуты: имя, тип, размер, права доступа, время создания/изменения. Типы: регулярные, директории, символьные/блочные устройства, сокеты, pipe.</p></div>'},
+  {num:52, title:"Организация файлов и доступ к ним", content:'<div class="section"><h3>📋 Организация файлов</h3><ul><li><span class="highlight">Последовательный доступ</span> — чтение с начала</li><li><span class="highlight">Прямой доступ</span> — чтение с указанного блока</li><li><span class="highlight">Индексный доступ</span> — через индекс блоков</li></ul></div>'},
+  {num:53, title:"Операции над файлами", content:'<div class="section"><h3>🔧 Операции</h3><p>Создание (create), удаление (delete), открытие (open), закрытие (close), чтение (read), запись (write), изменение позиции (seek), усечение (truncate), получение/установка атрибутов (getattr/setattr).</p></div>'},
+  {num:54, title:"Директории. Логическая структура файлового архива", content:'<div class="section"><h3>🗂️ Директории</h3><p><span class="highlight">Директория</span> — специальный файл, содержащий список файлов и поддиректорий. Структуры: одноуровневая, двухуровневая, иерархическая (дерево). В Unix — всё файл, директория — файл с inode.</p></div>'},
+  {num:55, title:"Операции над директориями", content:'<div class="section"><h3>🔧 Операции над директориями</h3><p>Создание, удаление (только пустой), открытие, закрытие, чтение, переименование, связывание (link), разрывание связи (unlink), поиск.</p></div>'},
+  {num:56, title:"Защита файлов", content:'<div class="section"><h3>🔒 Защита файлов</h3><p>Права доступа: чтение (r), запись (w), исполнение (x). Для 3 категорий: владелец (owner), группа (group), остальные (others). В Unix — 9 бит (rwxrwxrwx). ACL (Access Control Lists) — расширенные списки доступа.</p></div>'},
+  {num:57, title:"Общая структура файловой системы", content:'<div class="section"><h3>📊 Структура ФС</h3><p>Слои: прикладные программы → логическая ФС → модуль организации файлов → базовая ФС → драйвер устройства. <span class="highlight">inode</span> (Unix) — структура с метаданными файла (кроме имени). <span class="highlight">Superblock</span> — метаданные ФС (размер, число inode и т.д.).</p></div>'},
+  {num:58, title:"Управление внешней памятью", content:'<div class="section"><h3>💾 Управление диском</h3><p>Диск делится на <span class="highlight">блоки</span> (секторы). Методы выделения блоков: <span class="highlight">непрерывное</span> (быстро, но внешняя фрагментация), <span class="highlight">связанное</span> (цепочка блоков), <span class="highlight">индексное</span> (inode с указателями на блоки).</p></div>'},
+  {num:59, title:"Управление свободным и занятым дисковым пространством", content:'<div class="section"><h3>📋 Управление пространством</h3><p>Методы: <span class="highlight">битовые карты (bitmap)</span> — каждый блок представлен битом; <span class="highlight">связанный список</span> — цепочка свободных блоков; <span class="highlight">группировка</span> — список списков. Дефрагментация — уплотнение свободного пространства.</p></div>'},
+  {num:60, title:"Монтирование файловых систем", content:'<div class="section"><h3>📌 Монтирование</h3><p>Процесс подключения ФС к корневому дереву директорий. Команда <code class="code">mount</code> присоединяет ФС устройства к указанной <span class="highlight">точке монтирования</span>. После монтирования содержимое устройства доступно через эту директорию.</p></div>'},
+  {num:61, title:"Связывание файлов", content:'<div class="section"><h3>🔗 Связывание (Linking)</h3><ul><li><span class="highlight">Жёсткая ссылка (hard link)</span> — несколько имён для одного inode. Нельзя для директорий и разных ФС.</li><li><span class="highlight">Символическая ссылка (symlink)</span> — отдельный файл, содержащий путь к другому файлу. Можно для любых объектов.</li></ul></div>'},
+  {num:62, title:"Надежность файловой системы", content:'<div class="section"><h3>🛡️ Надёжность ФС</h3><ul><li><span class="highlight">Журналирование (journaling)</span> — запись изменений в журнал перед выполнением. Восстановление после сбоя — по журналу.</li><li><span class="highlight">Проверка целостности</span> — fsck, chkdsk.</li><li><span class="highlight">Резервное копирование</span> — backup, snapshots.</li><li><span class="highlight">RAID</span> — избыточность на уровне дисков.</li></ul></div>'},
+  {num:63, title:"Производительность файловой системы", content:'<div class="section"><h3>⚡ Производительность</h3><ul><li><span class="highlight">Кэширование</span> — буферный кэш для часто используемых блоков</li><li><span class="highlight">Опережающее чтение</span> (read-ahead) — предзагрузка следующих блоков</li><li><span class="highlight">Дефрагментация</span> — уменьшение фрагментации</li><li><span class="highlight">Отложенная запись</span> — группировка записей для оптимизации</li></ul></div>'},
+  {num:64, title:"Общие сведения об архитектуре компьютера", content:'<div class="section"><h3>🏛️ Архитектура</h3><p>Основные компоненты: <span class="highlight">CPU</span> (процессор), <span class="highlight">память</span> (RAM), <span class="highlight">шина</span> (bus) — соединяет компоненты, <span class="highlight">контроллеры устройств</span>. Архитектура фон Неймана: одно пространство для кода и данных. Гарвардская: раздельные шины.</p></div>'},
+  {num:65, title:"Структура контроллера устройства", content:'<div class="section"><h3>🔌 Контроллер устройства</h3><p>Электронная плата, управляющая устройством ввода-вывода. Содержит: <span class="highlight">регистры</span> (команд, данных, состояния), <span class="highlight">буфер</span>, логику управления. Взаимодействует с CPU через порты ввода-вывода или MMIO.</p></div>'},
+  {num:66, title:"Прямой доступ к памяти (DMA)", content:'<div class="section"><h3>⚡ DMA (Direct Memory Access)</h3><p>Механизм, позволяющий устройству передавать данные в память напрямую, <span class="highlight">без участия CPU</span>. CPU настраивает DMA-контроллер (адрес, размер, направление) и продолжает работу. По завершении — прерывание. Освобождает CPU от копирования данных.</p></div>'},
+  {num:67, title:"Логические принципы организации ввода-вывода", content:'<div class="section"><h3>📋 Принципы ввода-вывода</h3><ul><li><span class="highlight">Программный ввод-вывод (PIO)</span> — CPU сам читает/пишет данные (медленно)</li><li><span class="highlight">Ввод-вывод по прерываниям</span> — устройство прерывает CPU по готовности</li><li><span class="highlight">DMA</span> — прямая передача без CPU</li></ul></div>'},
+  {num:68, title:"Интерфейс между базовой подсистемой ввода-вывода и драйверами", content:'<div class="section"><h3>🔗 Интерфейс драйверов</h3><p><span class="highlight">Драйвер</span> — модуль ядра, управляющий устройством. Базовая подсистема ввода-вывода предоставляет единый интерфейс: <code class="code">open, close, read, write, ioctl</code>. Драйвер реализует эти функции для конкретного устройства. Это позволяет ОС работать с любым устройством одинаково.</p></div>'},
+  {num:69, title:"Функции базовой подсистемы ввода-вывода", content:'<div class="section"><h3>⚙️ Функции подсистемы ввода-вывода</h3><ul><li>Буферизация данных</li><li>Кэширование</li><li>Спулинг (spooling) — организация очереди</li><li>Обработка прерываний</li><li>Планирование запросов к устройству</li><li>Обработка ошибок</li></ul></div>'},
+  {num:70, title:"Алгоритмы планирования запросов к жесткому диску", content:'<div class="section"><h3>💿 Планирование запросов к диску</h3><ul><li><span class="highlight">FCFS</span> — в порядке поступления</li><li><span class="highlight">SSTF</span> (Shortest Seek Time First) — ближайший запрос</li><li><span class="highlight">SCAN (Elevator)</span> — движение головки в одном направлении</li><li><span class="highlight">C-SCAN</span> — циклический SCAN (только в одну сторону)</li><li><span class="highlight">LOOK / C-LOOK</span> — SCAN до последнего запроса (не до края)</li></ul></div>'},
+  {num:71, title:"Сетевые и распределенные операционные системы", content:'<div class="section"><h3>🌐 Сетевые ОС</h3><p>Предоставляют сервисы для работы в сети (TCP/IP, файловые серверы, веб-серверы). <span class="highlight">Распределённые ОС</span> — несколько компьютеров работают как единая система. Прозрачность: пользователь не знает, где физически находятся ресурсы.</p></div>'},
+  {num:72, title:"Взаимодействие удаленных процессов как основа работы вычислительных сетей", content:'<div class="section"><h3>🤝 Удалённое взаимодействие</h3><p>Процессы на разных компьютерах общаются через сеть. Модели: <span class="highlight">клиент-сервер</span> (запрос-ответ), <span class="highlight">peer-to-peer</span> (равные узлы), <span class="highlight">RPC</span> (Remote Procedure Call) — вызов функции на удалённом компьютере как локальной.</p></div>'},
+  {num:73, title:"Понятие протокола", content:'<div class="section"><h3>📋 Протокол</h3><p><span class="highlight">Протокол</span> — набор правил и форматов для обмена данными между устройствами. Определяет: формат сообщений, порядок обмена, обработку ошибок. Примеры: TCP, UDP, IP, HTTP, FTP, SMTP.</p></div>'},
+  {num:74, title:"Многоуровневая модель построения сетевых вычислительных систем", content:'<div class="section"><h3>🧅 Модель OSI (7 уровней)</h3><ol><li>Физический — биты, сигналы</li><li>Канальный — кадры, MAC-адреса</li><li>Сетевой — IP, маршрутизация</li><li>Транспортный — TCP/UDP, порты</li><li>Сеансовый — управление сессией</li><li>Представления — кодирование</li><li>Прикладной — HTTP, FTP, SMTP</li></ol></div><div class="section"><h3>🌐 Модель TCP/IP (4 уровня)</h3><p>Канальный → Сетевой (IP) → Транспортный (TCP/UDP) → Прикладной.</p></div>'},
+  {num:75, title:"Проблемы адресации в сети", content:'<div class="section"><h3>📍 Адресация в сетях</h3><ul><li><span class="highlight">MAC-адрес</span> — физический адрес устройства (6 байт)</li><li><span class="highlight">IP-адрес</span> — логический адрес узла (IPv4: 4 байта, IPv6: 16 байт)</li><li><span class="highlight">Порт</span> — идентификатор процесса/сервиса</li><li><span class="highlight">DNS</span> — преобразование доменных имён в IP-адреса</li><li><span class="highlight">ARP</span> — преобразование IP в MAC</li></ul></div>'},
+  {num:76, title:"Проблемы маршрутизации в сетях", content:'<div class="section"><h3>🗺️ Маршрутизация</h3><p>Выбор пути передачи пакета через сеть. Алгоритмы: <span class="highlight">статическая</span> (фиксированные таблицы) и <span class="highlight">динамическая</span> (адаптивные протоколы). Протоколы: RIP (вектор расстояния), OSPF (состояние каналов), BGP (междоменная).</p></div>'},
+  {num:77, title:"Угрозы безопасности", content:'<div class="section"><h3>🔐 Угрозы безопасности</h3><ul><li><span class="highlight">Перехват</span> — чтение данных без разрешения</li><li><span class="highlight">Модификация</span> — изменение данных</li><li><span class="highlight">Подмена</span> — выдача себя за другого</li><li><span class="highlight">Отказ в обслуживании (DoS)</span> — перегрузка системы</li><li><span class="highlight">Вредоносное ПО</span> — вирусы, черви, трояны</li></ul></div>'},
+  {num:78, title:"Криптография как одна из базовых технологий безопасности ОС", content:'<div class="section"><h3>🔑 Криптография</h3><p>Наука о шифровании данных. <span class="highlight">Симметричное шифрование</span> — один ключ для шифрования и дешифрования (AES, DES). <span class="highlight">Асимметричное</span> — пара ключей: открытый (шифрование) и закрытый (дешифрование) — RSA.</p></div>'},
+  {num:79, title:"Шифрование с использованием алгоритма RSA", content:'<div class="section"><h3>🔐 RSA (Rivest-Shamir-Adleman)</h3><p>Асимметричный алгоритм. Основан на сложности разложения больших чисел на множители. </p><ul><li>Выбираются два больших простых числа p, q</li><li>n = p × q</li><li>Открытый ключ: (e, n), закрытый: (d, n)</li><li>Шифрование: c = m^e mod n</li><li>Дешифрование: m = c^d mod n</li></ul></div>'},
+  {num:80, title:"Идентификация и аутентификация", content:'<div class="section"><h3>🆔 Идентификация и аутентификация</h3><p><span class="highlight">Идентификация</span> — предъявление идентификатора (имя, логин). <span class="highlight">Аутентификация</span> — подтверждение, что пользователь — тот, за кого себя выдаёт (пароль, биометрия, токен). Факторы: знание (пароль), владение (ключ), свойство (отпечаток).</p></div>'},
+  {num:81, title:"Авторизация. Разграничение доступа к объектам ОС", content:'<div class="section"><h3>🔒 Авторизация</h3><p>Определение прав пользователя на доступ к объектам. <span class="highlight">Дискреционное управление</span> (DAC) — владелец сам назначает права (Unix rwx). <span class="highlight">Мандатное</span> (MAC) — системные правила (SELinux). <span class="highlight">Ролевое</span> (RBAC) — права по ролям.</p></div>'}
 ];
 
-// ==================== QUESTIONS ====================
-const questions = [
-  {q:"Что такое операционная система?", a:["Комплекс программ для управления ресурсами компьютера и взаимодействия с пользователем","Набор драйверов для устройств","Текстовый редактор","Файловый менеджер"], correct:0, ticket:1, explain:"ОС — это комплекс взаимосвязанных программ, управляющих ресурсами компьютера и организующих взаимодействие с пользователем."},
-  {q:"Какие две основные части входят в состав вычислительной системы?", a:["Монитор и клавиатура","Техническая и программная","Процессор и память","Системное и прикладное ПО"], correct:1, ticket:1, explain:"Вычислительная система состоит из технической части (устройства) и программной части (программы)."},
-  {q:"Какой метод упрощения широко применяется при разработке ОС?", a:["Инкапсуляция","Абстрагирование","Наследование","Полиморфизм"], correct:1, ticket:2, explain:"Абстрагирование позволяет сконцентрироваться на взаимодействии высокоуровневых компонентов, игнорируя детали реализации."},
-  {q:"Что предоставляет ОС пользователю?", a:["Новый компьютер","Виртуальную машину","Бесплатные программы","Доступ в интернет"], correct:1, ticket:2, explain:"ОС предоставляет пользователю виртуальную машину, которую легче программировать и с которой легче работать, чем с реальной аппаратурой."},
-  {q:"Какую функцию выполняет ОС, когда несколько программ хотят печатать одновременно?", a:["Отменяет печать","Организует очередь на печать","Печатает всё сразу","Выключает принтер"], correct:1, ticket:3, explain:"ОС предотвращает хаос за счёт буферизации информации на диске и организации очереди на печать."},
-  {q:"Какую роль выполняет ОС как защитник?", a:["Шифрует все данные","Организует безопасную работу пользователей","Устанавливает антивирус","Блокирует интернет"], correct:1, ticket:4, explain:"ОС как защитник обеспечивает сохранность информации и пресекает попытки несанкционированного использования."},
-  {q:"Какая часть ОС работает постоянно?", a:["Весь код ОС","Ядро","Драйверы","Интерфейс"], correct:1, ticket:5, explain:"Постоянно работает только ядро ОС — базовая часть, всегда находящаяся в оперативной памяти."},
-  {q:"Что такое системный вызов?", a:["Вызов функции в программе","Интерфейс между ОС и пользовательской программой","Нажатие клавиши на клавиатуре","Запуск браузера"], correct:1, ticket:6, explain:"Системные вызовы — это интерфейс между ОС и пользовательской программой для обращения к услугам ядра."},
-  {q:"В какой режим переходит процесс при системном вызове?", a:["Пользовательский","Режим ядра (kernel mode)","Энергосберегающий","Режим ожидания"], correct:1, ticket:6, explain:"При системном вызове задача переходит в привилегированный режим или режим ядра (kernel mode)."},
-  {q:"Аппаратные прерывания — это асинхронные или синхронные события?", a:["Синхронные","Асинхронные","И то и другое","Ни то, ни другое"], correct:1, ticket:7, explain:"Аппаратные прерывания — асинхронные события, они возникают независимо от того, какой код исполняется процессором."},
-  {q:"Для чего используется прерывание таймера?", a:["Для измерения температуры","Для планирования процессов","Для зарядки батареи","Для выключения компьютера"], correct:1, ticket:7, explain:"Прерывания таймера используются ОС при планировании процессов (вытесняющая многозадачность)."},
-  {q:"Что такое исключительная ситуация (exception)?", a:["Остановка компьютера","Событие при невозможности выполнить команду","Нажатие кнопки Reset","Перезагрузка ОС"], correct:1, ticket:8, explain:"Исключение — событие при попытке выполнить команду, которая не может быть выполнена до конца."},
-  {q:"Какие исключения считаются нормальным явлением в работе ОС?", a:["Все исключения","Исправимые","Неисправимые","Никакие"], correct:1, ticket:8, explain:"Исправимые исключения (например, отсутствие страницы в памяти) считаются нормальным явлением."},
-  {q:"Что такое файл?", a:["Папка на диске","Именованная область данных на носителе","Программа","Ссылка в интернете"], correct:1, ticket:9, explain:"Файл — это именованная часть пространства на носителе информации для хранения данных."},
-  {q:"Главная задача файловой системы?", a:["Сжимать данные","Скрыть особенности ввода-вывода","Шифровать файлы","Удалять файлы"], correct:1, ticket:9, explain:"Главная задача файловой системы — скрыть особенности ввода-вывода и дать простую абстрактную модель файлов."},
-  {q:"Как устроено монолитное ядро?", a:["Из отдельных модулей","Как одна большая программа из процедур","Из микро-сервисов","Из драйверов"], correct:1, ticket:10, explain:"Монолитное ядро — одна программа, где все компоненты — части единого целого с общими структурами данных."},
-  {q:"Какой недостаток монолитного ядра?", a:["Низкая производительность","Сложность добавления новых компонентов","Не поддерживает драйверы","Слишком много модулей"], correct:1, ticket:10, explain:"Для добавления нового компонента нужна перекомпиляция ядра. Также ошибка в любой части может обрушить всю систему."},
-  {q:"Какой принцип взаимодействия уровней в многоуровневой архитектуре?", a:["Уровень N вызывает любой уровень","Уровень N вызывает только уровень N-1","Уровни не взаимодействуют","Все уровни равны"], correct:1, ticket:11, explain:"В многоуровневой системе объекты уровня N могут вызывать только объекты уровня N-1."},
-  {q:"Кто впервые применил многоуровневый подход?", a:["Торвальдс","Дейкстра","Таненбаум","Ритчи"], correct:1, ticket:11, explain:"Впервые многоуровневый подход применил Дейкстра при создании системы THE в 1968 году."},
-  {q:"Что такое виртуальная машина в контексте ОС?", a:["Эмулятор игр","Копия всего hardware для пользователя","Облачное хранилище","Текстовый редактор"], correct:1, ticket:12, explain:"Виртуальная машина — копия всего hardware (процессор, память, устройства), предоставляемая пользователю ОС."},
-  {q:"Где в микроядерной архитектуре работают большинство компонентов ОС?", a:["В ядре","На уровне пользователя","В BIOS","В процессоре"], correct:1, ticket:13, explain:"В микроядерной архитектуре большинство компонентов ОС являются самостоятельными программами на уровне пользователя."},
-  {q:"Преимущество микроядерной архитектуры?", a:["Максимальная производительность","Высокая модульность и надёжность","Простота реализации","Маленький размер"], correct:1, ticket:13, explain:"Микроядро даёт высокую модульность, возможность загрузки драйверов без перезагрузки и повышенную надёжность."},
-  {q:"Linux — это пример какой архитектуры ядра?", a:["Микроядро","Монолитное ядро с модулями","Многоуровневая","Нано-ядро"], correct:1, ticket:14, explain:"Linux — монолитное ядро с элементами микроядерной архитектуры (динамическая загрузка модулей)."},
-  {q:"Что такое вытесняющая многозадачность?", a:["Программа сама решает, когда отдать CPU","ОС принудительно прерывает процесс по таймеру","Только одна программа в памяти","Процессы не переключаются"], correct:1, ticket:15, explain:"При вытесняющей многозадачности каждой программе выделяется квант времени, по истечении которого управление принудительно передаётся другой программе."},
-  {q:"Что такое процесс?", a:["Любая программа на диске","Программа в режиме выполнения","Файл с расширением .exe","Набор инструкций"], correct:1, ticket:16, explain:"Процесс — это программа, находящаяся в режиме выполнения, с собственным адресным пространством."},
-  {q:"Какие три состояния процесса в расширенной модели?", a:["Старт, работа, стоп","Готовность, исполнение, ожидание","Создание, удаление, пауза","Ввод, вывод, обработка"], correct:1, ticket:17, explain:"Три состояния: готовность (ждёт CPU), исполнение (выполняется), ожидание (ждёт события)."},
-  {q:"Что такое PCB (Process Control Block)?", a:["Печатная плата","Блок управления процессом","Блок питания","Блок памяти"], correct:1, ticket:19, explain:"PCB (Process Control Block) — структура данных, описывающая процесс в ОС."},
-  {q:"Из каких трёх частей состоит контекст процесса?", a:["Текст, данные, стек","Регистровый, системный, пользовательский","Ввод, вывод, обработка","Ядро, драйвер, приложение"], correct:1, ticket:19, explain:"Контекст = регистровый (регистры CPU) + системный (PCB) + пользовательский (код и данные)."},
-  {q:"Как в Unix создаётся новый процесс?", a:["Через create_process()","Через fork()","Через new()","Через start()"], correct:1, ticket:20, explain:"В Unix процесс создаётся с помощью fork() — создаётся копия родительского процесса. Затем может быть вызван exec() для загрузки новой программы."},
-  {q:"Как называется время непрерывного использования процессора?", a:["I/O burst","CPU burst","Time slice","Clock tick"], correct:1, ticket:25, explain:"CPU burst — это промежуток времени непрерывного использования процессора. Чередуется с I/O burst."},
-  {q:"Алгоритм FCFS — это...", a:["Fast CPU First Selection","First-Come, First-Served","Fair CPU Scheduling","First-Check, First-Start"], correct:1, ticket:27, explain:"FCFS (First-Come, First-Served) — простейший алгоритм: первым пришёл, первым обслужен (очередь FIFO)."},
-  {q:"Какой алгоритм является модификацией FCFS с вытеснением?", a:["SJF","Round Robin","Priority","Multilevel Queue"], correct:1, ticket:28, explain:"Round Robin — это FCFS с вытесняющим режимом: каждый процесс получает квант времени."},
-  {q:"SJF выбирает процесс с...", a:["Наибольшим приоритетом","Наименьшим CPU burst","Наибольшим временем ожидания","Случайным образом"], correct:1, ticket:29, explain:"SJF выбирает процесс с наименьшим предполагаемым CPU burst."},
-  {q:"Что такое race condition?", a:["Гонка процессоров","Недетерминированный результат из-за чередования операций","Соревнование программ","Ошибка синтаксиса"], correct:1, ticket:41, explain:"Race condition — недетерминированный набор активностей, где результат зависит от порядка чередования операций."},
-  {q:"Критическая секция — это...", a:["Особый режим процессора","Часть программы, где возможен race condition","Секция памяти","Тип файла"], correct:1, ticket:42, explain:"Критическая секция — часть программы, исполнение которой может привести к race condition."},
-  {q:"Какое требование НЕ предъявляется к алгоритмам взаимоисключения?", a:["Взаимоисключение","Максимальная скорость","Прогресс","Ограниченное ожидание"], correct:1, ticket:43, explain:"Пять требований: программное решение, без предположений, взаимоисключение, прогресс, ограниченное ожидание. Максимальная скорость не требуется."},
-  {q:"Кто предложил корректное решение взаимоисключения для 2 процессов?", a:["Дейкстра","Петерсон","Таненбаум","Лампорт"], correct:1, ticket:46, explain:"Петерсон (Peterson) в 1981 году предложил изящное решение проблемы взаимоисключения для двух процессов."},
-  {q:"Что такое семафор?", a:["Сигнал остановки","Целая переменная с атомарными операциями P и V","Драйвер устройства","Специальный регистр"], correct:1, ticket:49, explain:"Семафор — целая неотрицательная переменная, доступ к которой только через атомарные операции P (проверка) и V (увеличение)."},
-  {q:"Какие семафоры используются в задаче producer-consumer?", a:["read, write, execute","empty, full, mutex","open, close, lock","start, stop, pause"], correct:1, ticket:50, explain:"Три семафора: empty (свободные места), full (занятые места), mutex (взаимоисключение)."},
-  {q:"Что такое тупик (deadlock)?", a:["Завершение программы","Процесс ждёт события, которое никогда не произойдёт","Ошибка в коде","Нехватка памяти"], correct:1, ticket:53, explain:"Тупик — ситуация, когда процесс ожидает события, которое никогда не произойдёт, часто из-за взаимной блокировки ресурсов."},
-  {q:"Сколько условий Коффмана необходимо для возникновения тупика?", a:["1","2","3","4"], correct:3, ticket:54, explain:"Все 4 условия (взаимоисключение, ожидание, неперераспределяемость, круговое ожидание) необходимы и достаточны для тупика."},
-  {q:"Какой подход к борьбе с тупиками используют Windows и Unix?", a:["Алгоритм банкира","Игнорирование проблемы","Обнаружение тупиков","Предотвращение"], correct:1, ticket:55, explain:"Windows и Unix игнорируют проблему тупиков, считая, что маловероятный тупик лучше неудобных ограничений."},
-  {q:"Алгоритм банкира основан на понятии...", a:["Кредитного рейтинга","Безопасного состояния","Денежного резерва","Процентной ставки"], correct:1, ticket:56, explain:"Алгоритм банкира базируется на безопасных (надёжных) состояниях — когда есть последовательность выполнения без тупика."},
-  {q:"Что такое спулинг (spooling)?", a:["Удаление файлов","Схема, где устройством управляет только один системный процесс","Ускорение печати","Сжатие данных"], correct:1, ticket:57, explain:"Спулинг — только один процесс (демон) работает с устройством, остальные через буфер. Так принтер становится разделяемым устройством."},
-  {q:"Что используется для обнаружения тупиков?", a:["Дерево процессов","Граф распределения ресурсов","Таблица файлов","Очередь сообщений"], correct:1, ticket:58, explain:"Обнаружение тупиков использует графы распределения ресурсов — проверяется наличие цикла."},
-  {q:"Что такое нить (thread)?", a:["Часть ОС","Поток исполнения внутри процесса","Тонкий провод","Сетевой протокол"], correct:1, ticket:40, explain:"Нити процесса разделяют код и ресурсы, но каждая имеет свой PC, регистры и стек."},
-  {q:"Какая адресация использует промежуточный объект (почтовый ящик)?", a:["Прямая","Непрямая","Симметричная","Асимметричная"], correct:1, ticket:36, explain:"При непрямой адресации данные помещаются в почтовый ящик, откуда извлекаются другим процессом."}
+var questions = [
+  {q:"Что такое операционная система?", a:["Комплекс программ для управления ресурсами и взаимодействия с пользователем","Набор драйверов","Текстовый редактор","Файловый менеджер"], correct:0, ticket:1, explain:"ОС — комплекс взаимосвязанных программ для управления ресурсами компьютера и организации взаимодействия с пользователем."},
+  {q:"Какие два вида частей входят в состав вычислительной системы?", a:["Монитор и клавиатура","Техническая и программная","Процессор и память","Системное и прикладное ПО"], correct:1, ticket:1, explain:"Вычислительная система состоит из технической части (устройства) и программной части (программы)."},
+  {q:"Какой метод упрощения применяется в ОС?", a:["Инкапсуляция","Абстрагирование","Наследование","Полиморфизм"], correct:1, ticket:1, explain:"Абстрагирование позволяет игнорировать детали реализации и концентрироваться на высокоуровневом взаимодействии."},
+  {q:"Что такое системный вызов?", a:["Вызов функции","Интерфейс между ОС и программой","Нажатие клавиши","Запуск браузера"], correct:1, ticket:2, explain:"Системные вызовы — интерфейс между ОС и пользовательской программой для обращения к услугам ядра."},
+  {q:"Аппаратные прерывания — асинхронные или синхронные?", a:["Синхронные","Асинхронные","И то и другое","Ни то, ни другое"], correct:1, ticket:2, explain:"Аппаратные прерывания — асинхронные, возникают независимо от выполняемого кода."},
+  {q:"Что такое исключительная ситуация (exception)?", a:["Остановка компьютера","Событие при невозможности выполнить команду","Нажатие Reset","Перезагрузка"], correct:1, ticket:2, explain:"Исключение — событие при попытке выполнить команду, которая не может быть выполнена до конца."},
+  {q:"Как устроено монолитное ядро?", a:["Из модулей","Одна большая программа","Микро-сервисы","Драйверы"], correct:1, ticket:3, explain:"Монолитное ядро — одна большая программа, где все компоненты — части единого целого с общими структурами данных."},
+  {q:"Преимущество микроядерной архитектуры?", a:["Максимальная производительность","Модульность и надёжность","Простота","Размер"], correct:1, ticket:3, explain:"Микроядро даёт модульность, загрузку драйверов без перезагрузки, повышенную надёжность."},
+  {q:"Какие 3 состояния процесса?", a:["Старт, работа, стоп","Готовность, исполнение, ожидание","Создание, удаление, пауза","Ввод, вывод, обработка"], correct:1, ticket:6, explain:"Готовность (ждёт CPU), исполнение (выполняется), ожидание (ждёт события)."},
+  {q:"Что такое PCB?", a:["Печатная плата","Блок управления процессом","Блок питания","Блок памяти"], correct:1, ticket:7, explain:"PCB (Process Control Block) — структура данных, описывающая процесс в ОС."},
+  {q:"Какой алгоритм — FCFS с вытеснением?", a:["SJF","Round Robin","Priority","Multilevel Queue"], correct:1, ticket:12, explain:"Round Robin — FCFS с вытеснением: каждый процесс получает квант времени."},
+  {q:"SJF выбирает процесс с...", a:["Наибольшим приоритетом","Наименьшим CPU burst","Наибольшим временем","Случайно"], correct:1, ticket:12, explain:"SJF выбирает процесс с наименьшим предполагаемым CPU burst."},
+  {q:"Что такое race condition?", a:["Гонка процессоров","Недетерминированный результат","Соревнование программ","Ошибка синтаксиса"], correct:1, ticket:21, explain:"Race condition — недетерминированный результат из-за зависимости от порядка чередования."},
+  {q:"Что такое критическая секция?", a:["Режим процессора","Часть программы с возможным race condition","Секция памяти","Тип файла"], correct:1, ticket:22, explain:"Критическая секция — часть программы, где возможен race condition."},
+  {q:"Автор корректного решения для 2 процессов?", a:["Дейкстра","Петерсон","Таненбаум","Лампорт"], correct:1, ticket:25, explain:"Петерсон (Peterson) в 1981 году предложил изящное решение взаимоисключения для 2 процессов."},
+  {q:"Что такое семафор?", a:["Сигнал","Целая переменная с P и V","Драйвер","Регистр"], correct:1, ticket:28, explain:"Семафор — целая неотрицательная переменная с атомарными операциями P (блокировка) и V (увеличение)."},
+  {q:"Какие семафоры в producer-consumer?", a:["read, write, execute","empty, full, mutex","open, close, lock","start, stop"], correct:1, ticket:29, explain:"empty (свободные места), full (занятые места), mutex (взаимоисключение)."},
+  {q:"Сколько условий Коффмана?", a:["1","2","3","4"], correct:3, ticket:32, explain:"4 условия: взаимоисключение, ожидание, неперераспределяемость, круговое ожидание."},
+  {q:"Какой подход к тупикам у Windows/Unix?", a:["Алгоритм банкира","Игнорирование","Обнаружение","Предотвращение"], correct:1, ticket:33, explain:"Windows и Unix игнорируют проблему тупиков — редкий тупик лучше неудобных ограничений."},
+  {q:"Что такое виртуальная память?", a:["Память на диске","Механизм выполнения процессов больше физической памяти","Облако","Кэш"], correct:1, ticket:42, explain:"Виртуальная память позволяет выполнять процессы, размер которых превышает доступную физическую память."},
+  {q:"Что такое TLB?", a:["Тип памяти","Кэш таблицы страниц","Контроллер","Драйвер"], correct:1, ticket:45, explain:"TLB (Translation Lookaside Buffer) — быстрый кэш для таблицы страниц внутри CPU."},
+  {q:"Алгоритм LRU — это...", a:["First-In-First-Out","Least Recently Used","Last In First Out","Random"], correct:1, ticket:48, explain:"LRU (Least Recently Used) — выгружается страница, которая дольше всех не использовалась."},
+  {q:"Что такое DMA?", a:["Прямой доступ к памяти без CPU","Тип процессора","Алгоритм","Файловая система"], correct:1, ticket:66, explain:"DMA — механизм передачи данных в память напрямую, без участия CPU."},
+  {q:"Модель OSI имеет сколько уровней?", a:["4","5","6","7"], correct:3, ticket:74, explain:"Модель OSI имеет 7 уровней: физический, канальный, сетевой, транспортный, сеансовый, представления, прикладной."},
+  {q:"RSA — это какой алгоритм?", a:["Симметричный","Асимметричный","Хэширование","Сжатие"], correct:1, ticket:79, explain:"RSA — асимметричный алгоритм, основанный на сложности разложения больших чисел на множители."}
 ];
 
-// ==================== FLASHCARDS ====================
-const flashcards = [
-  {term:"Операционная система (ОС)", def:"Комплекс взаимосвязанных программ для управления ресурсами компьютера и организации взаимодействия с пользователем"},
-  {term:"Системный вызов", def:"Интерфейс между ОС и пользовательской программой для обращения к услугам ядра"},
+var flashcards = [
+  {term:"Операционная система", def:"Комплекс программ для управления ресурсами и взаимодействия с пользователем"},
+  {term:"Системный вызов", def:"Интерфейс между ОС и пользовательской программой"},
   {term:"Аппаратное прерывание", def:"Асинхронное событие от внешнего устройства к процессору"},
-  {term:"Исключительная ситуация", def:"Событие при попытке выполнить команду, которая не может быть завершена"},
-  {term:"Файл", def:"Именованная область данных на внешнем носителе"},
-  {term:"Файловая система", def:"Механизм, скрывающий особенности ввода-вывода и дающий абстрактную модель файлов"},
-  {term:"Монолитное ядро", def:"Архитектура ОС, где все компоненты — части единой программы с общими структурами данных"},
-  {term:"Микроядро", def:"Минимальное ядро, обеспечивающее только передачу сообщений, планирование CPU, обработку прерываний и базовую память"},
-  {term:"Процесс", def:"Программа, находящаяся в режиме выполнения, с собственным адресным пространством"},
-  {term:"PCB (Process Control Block)", def:"Структура данных, описывающая процесс в ОС (состояние, регистры, учётные данные)"},
-  {term:"Контекст процесса", def:"Совокупность регистрового, системного и пользовательского контекстов процесса"},
-  {term:"CPU burst", def:"Промежуток времени непрерывного использования процессора процессом"},
-  {term:"I/O burst", df:"Промежуток времени ожидания процессом завершения ввода-вывода"},
-  {term:"FCFS", def:"First-Come, First-Served — алгоритм планирования с очередью FIFO"},
-  {term:"Round Robin (RR)", def:"Алгоритм планирования с вытеснением и квантованием времени"},
-  {term:"SJF", def:"Shortest-Job-First — выбор процесса с наименьшим CPU burst"},
-  {term:"Race condition", def:"Недетерминированный результат из-за чередования операций (состояние гонки)"},
-  {term:"Критическая секция", def:"Часть программы, исполнение которой может привести к race condition"},
-  {term:"Взаимоисключение (mutual exclusion)", def:"Принцип, при котором только один процесс может находиться в критической секции"},
-  {term:"Алгоритм Петерсона", def:"Корректное программное решение взаимоисключения для двух процессов"},
-  {term:"Алгоритм булочной (Bakery)", def:"Решение взаимоисключения для N процессов с использованием номеров-талончиков"},
-  {term:"Test-and-Set", def:"Атомарная аппаратная команда для проверки и установки значения"},
-  {term:"Семафор", def:"Целая переменная с атомарными операциями P (блокировка) и V (увеличение)"},
-  {term:"Монитор", def:"Тип данных с автоматическим взаимоисключением и условными переменными"},
-  {term:"Тупик (deadlock)", def:"Ситуация, когда процесс ждёт события, которое никогда не произойдёт"},
-  {term:"Условия Коффмана", def:"4 условия: взаимоисключение, ожидание, неперераспределяемость, круговое ожидание"},
-  {term:"Алгоритм банкира", def:"Предотвращение тупиков через безопасные состояния — ресурс выдаётся только если состояние остаётся безопасным"},
-  {term:"Спулинг (spooling)", def:"Механизм, где устройством управляет один процесс-демон, остальные через буфер"},
-  {term:"Идемпотентный процесс", def:"Процесс, который можно безопасно перезапустить с начала без потери данных"},
-  {term:"Нити (threads)", def:"Потоки внутри процесса, разделяющие код и данные, но имеющие свой PC и стек"},
-  {term:"Вытесняющее планирование", def:"Режим, где процесс может быть принудительно прерван таймером в любой момент"},
-  {term:"Невытесняющее планирование", def:"Режим, где процесс занимает CPU столько, сколько нужно, до добровольной отдачи"},
-  {term:"Многоуровневые очереди", def:"Разделение процессов на группы с разными алгоритмами планирования внутри"},
-  {term:"Multilevel Feedback Queue", def:"Очереди с миграцией процессов между уровнями в зависимости от поведения"},
-  {term:"Producer-Consumer", def:"Задача синхронизации производителя и потребителя с буфером ограниченного размера"},
-  {term:"Привилегированный режим", def:"Режим ядра (kernel mode), в котором исполняется код ОС с полным доступом к ресурсам"},
-  {term:"Программное прерывание", def:"Команда INT для вызова системного сервиса (синхронное событие)"},
-  {term:"Долгосрочное планирование", def:"Планирование заданий — выбирает, какое задание загрузить в систему (редко, минуты)"},
-  {term:"Краткосрочное планирование", def:"Планирование CPU — выбирает следующий процесс для исполнения (каждые ~100мс)"},
-  {term:"Абстрагирование в ОС", def:"Метод упрощения: игнорирование деталей реализации для фокуса на высокоуровневом взаимодействии"}
+  {term:"Исключение (exception)", def:"Событие при невозможности выполнить команду"},
+  {term:"Монолитное ядро", def:"ОС как единая программа, все компоненты в привилегированном режиме"},
+  {term:"Микроядро", def:"Минимальное ядро: сообщения, планирование, прерывания, память"},
+  {term:"Процесс", def:"Программа в режиме выполнения с собственным адресным пространством"},
+  {term:"PCB", def:"Структура данных, описывающая процесс в ОС"},
+  {term:"Контекст процесса", def:"Регистровый + системный + пользовательский контекст"},
+  {term:"CPU burst", def:"Промежуток непрерывного использования процессора"},
+  {term:"FCFS", def:"First-Come, First-Served — очередь FIFO"},
+  {term:"Round Robin", def:"FCFS с вытеснением и квантованием времени"},
+  {term:"SJF", def:"Shortest-Job-First — выбор наименьшего CPU burst"},
+  {term:"Race condition", def:"Недетерминированный результат из-за чередования операций"},
+  {term:"Критическая секция", def:"Часть программы с возможным race condition"},
+  {term:"Алгоритм Петерсона", def:"Корректное решение взаимоисключения для 2 процессов"},
+  {term:"Алгоритм булочной", def:"Решение взаимоисключения для N процессов с номерами-талончиками"},
+  {term:"Test-and-Set", def:"Атомарная команда проверки и установки значения"},
+  {term:"Семафор", def:"Целая переменная с атомарными P (блокировка) и V (увеличение)"},
+  {term:"Монитор", def:"Тип данных с автоматическим взаимоисключением"},
+  {term:"Тупик (deadlock)", def:"Процесс ждёт события, которое никогда не произойдёт"},
+  {term:"Алгоритм банкира", def:"Выдача ресурсов только в безопасном состоянии"},
+  {term:"Спулинг (spooling)", def:"Управление устройством через один процесс-демон"},
+  {term:"Виртуальная память", def:"Механизм для выполнения процессов больше физической памяти"},
+  {term:"Страничная память", def:"Деление памяти на страницы и кадры одинакового размера"},
+  {term:"TLB", def:"Кэш таблицы страниц внутри CPU"},
+  {term:"Page fault", def:"Страничное прерывание при отсутствии страницы в памяти"},
+  {term:"LRU", def:"Least Recently Used — выгрузка давно не использовавшейся страницы"},
+  {term:"Рабочее множество", def:"Набор страниц, активно используемых процессом"},
+  {term:"DMA", def:"Прямой доступ к памяти без участия процессора"},
+  {term:"Протокол", def:"Набор правил для обмена данными между устройствами"},
+  {term:"RSA", def:"Асимметричный алгоритм шифрования"},
+  {term:"Аутентификация", def:"Подтверждение, что пользователь — тот, за кого себя выдаёт"},
+  {term:"Авторизация", def:"Определение прав пользователя на доступ к объектам"},
+  {term:"Идентификация", def:"Предъявление идентификатора (логин, имя)"}
 ];
 
-// ==================== STATE ====================
-let mode = 'read';
-let currentTicket = null;
-let testState = null;
+var mode = 'read', currentTicket = null, testState = null;
 
-// ==================== READ MODE ====================
+function toggleSidebar() {
+  document.querySelector('.sidebar').classList.toggle('open');
+  document.getElementById('sidebarOverlay').classList.toggle('show');
+  document.getElementById('hamburgerBtn').textContent = document.querySelector('.sidebar').classList.contains('open') ? '✕' : '☰';
+}
+
+function closeSidebar() {
+  document.querySelector('.sidebar').classList.remove('open');
+  document.getElementById('sidebarOverlay').classList.remove('show');
+  document.getElementById('hamburgerBtn').textContent = '☰';
+}
+
+document.addEventListener('touchstart', function(){}, {passive:true});
+
 function renderTickets(list) {
-  const container = document.getElementById('ticketList');
+  var container = document.getElementById('ticketList');
   container.innerHTML = '';
   list.forEach(function(t) {
-    const div = document.createElement('div');
+    var div = document.createElement('div');
     div.className = 'ticket-item';
     div.dataset.num = t.num;
     div.innerHTML = '<div class="num">' + t.num + '</div><div class="title">' + t.title + '</div>';
@@ -334,219 +395,109 @@ function renderTickets(list) {
 
 function filterTickets() {
   if (mode !== 'read') return;
-  const q = document.getElementById('searchInput').value.toLowerCase();
-  renderTickets(tickets.filter(function(t) {
-    return t.title.toLowerCase().includes(q) || t.num.toString().includes(q);
-  }));
+  var q = document.getElementById('searchInput').value.toLowerCase();
+  renderTickets(tickets.filter(function(t) { return t.title.toLowerCase().includes(q) || t.num.toString().includes(q); }));
 }
 
 function openTicket(num) {
   if (mode !== 'read') switchMode('read');
+  closeSidebar();
   currentTicket = num;
-  const ticket = tickets.find(function(t) { return t.num === num; });
+  var ticket = tickets.find(function(t) { return t.num === num; });
   if (!ticket) return;
-  document.querySelectorAll('.ticket-item').forEach(function(el) {
-    el.classList.toggle('active', parseInt(el.dataset.num) === num);
-  });
-  const contentDiv = document.getElementById('ticketContent');
-  const emptyDiv = document.getElementById('emptyState');
-  contentDiv.style.display = 'block';
-  emptyDiv.style.display = 'none';
-  contentDiv.innerHTML = '<div class="content-header"><div class="num-badge">Билет ' + ticket.num + '</div><h2>' + ticket.title + '</h2></div>' + ticket.content;
+  document.querySelectorAll('.ticket-item').forEach(function(el) { el.classList.toggle('active', parseInt(el.dataset.num) === num); });
+  var c = document.getElementById('ticketContent'), e = document.getElementById('emptyState');
+  c.style.display = 'block'; e.style.display = 'none';
+  c.innerHTML = '<div class="content-header"><div class="num-badge">Билет ' + ticket.num + '</div><h2>' + ticket.title + '</h2></div>' + ticket.content;
   document.getElementById('mainContent').scrollTop = 0;
   updateProgress();
 }
 
 function updateProgress() {
-  var viewed = new Set(JSON.parse(localStorage.getItem('viewedTickets') || '[]'));
-  var pct = Math.round((viewed.size / tickets.length) * 100);
-  document.getElementById('progressFill').style.width = pct + '%';
+  var v = new Set(JSON.parse(localStorage.getItem('viewedTickets') || '[]'));
+  document.getElementById('progressFill').style.width = Math.round((v.size / tickets.length) * 100) + '%';
 }
 
 document.addEventListener('click', function() {
   if (currentTicket && mode === 'read') {
-    var viewed = new Set(JSON.parse(localStorage.getItem('viewedTickets') || '[]'));
-    viewed.add(currentTicket);
-    localStorage.setItem('viewedTickets', JSON.stringify([...viewed]));
+    var v = new Set(JSON.parse(localStorage.getItem('viewedTickets') || '[]'));
+    v.add(currentTicket);
+    localStorage.setItem('viewedTickets', JSON.stringify([...v]));
     updateProgress();
   }
 });
 
-// ==================== MODE SWITCH ====================
 function switchMode(newMode) {
+  closeSidebar();
   mode = newMode;
   document.querySelectorAll('.mode-btn').forEach(function(b) { b.classList.remove('active'); });
   if (newMode === 'read') document.querySelector('.mode-btn.read').classList.add('active');
   else if (newMode === 'test') document.querySelector('.mode-btn.test').classList.add('active');
   else if (newMode === 'cards') document.querySelector('.mode-btn.cards').classList.add('active');
-
-  const searchInput = document.getElementById('searchInput');
-  const ticketList = document.getElementById('ticketList');
-  const contentDiv = document.getElementById('ticketContent');
-  const emptyDiv = document.getElementById('emptyState');
-
+  var si = document.getElementById('searchInput'), tl = document.getElementById('ticketList'), c = document.getElementById('ticketContent'), e = document.getElementById('emptyState');
   if (newMode === 'read') {
-    searchInput.style.display = 'block';
-    searchInput.placeholder = '🔍 Поиск билета...';
-    renderTickets(tickets);
-    contentDiv.style.display = 'block';
-    emptyDiv.style.display = 'none';
-    if (currentTicket) openTicket(currentTicket);
-    else if (tickets.length > 0) openTicket(1);
-  } else if (newMode === 'test') {
-    searchInput.style.display = 'none';
-    ticketList.innerHTML = '';
-    startTest();
-  } else if (newMode === 'cards') {
-    searchInput.style.display = 'none';
-    ticketList.innerHTML = '';
-    showFlashcards();
-  }
+    si.style.display = 'block'; si.placeholder = '🔍 Поиск билета...';
+    renderTickets(tickets); c.style.display = 'block'; e.style.display = 'none';
+    if (currentTicket) openTicket(currentTicket); else if (tickets.length > 0) openTicket(1);
+  } else if (newMode === 'test') { si.style.display = 'none'; tl.innerHTML = ''; startTest(); }
+  else if (newMode === 'cards') { si.style.display = 'none'; tl.innerHTML = ''; showFlashcards(); }
 }
 
-// ==================== TEST MODE ====================
 function startTest() {
-  testState = {
-    questions: questions.map(function(q,i) { return {index:i, answered:false, selected:null}; }),
-    current: 0,
-    correct: 0,
-    finished: false,
-    shuffled: false
-  };
+  testState = { questions: questions.map(function(q,i) { return {index:i, answered:false, selected:null}; }), current: 0, correct: 0, finished: false };
   renderTest();
 }
 
 function renderTest() {
-  const contentDiv = document.getElementById('ticketContent');
-  const emptyDiv = document.getElementById('emptyState');
-  contentDiv.style.display = 'block';
-  emptyDiv.style.display = 'none';
-
-  if (testState.finished) {
-    renderTestResult();
-    return;
-  }
-
-  const qIdx = testState.current;
-  const qData = questions[qIdx];
-  const qState = testState.questions[qIdx];
-  const total = questions.length;
-  const progress = ((qIdx + 1) / total) * 100;
-
-  let answersHtml = '';
-  var letters = ['A','B','C','D'];
+  var c = document.getElementById('ticketContent'), e = document.getElementById('emptyState');
+  c.style.display = 'block'; e.style.display = 'none';
+  if (testState.finished) { renderTestResult(); return; }
+  var qIdx = testState.current, qData = questions[qIdx], qState = testState.questions[qIdx], total = questions.length;
+  var letters = ['A','B','C','D'], answersHtml = '', nextHtml = '';
   for (var i = 0; i < qData.a.length; i++) {
     var cls = 'answer';
-    if (qState.answered) { cls += ' disabled'; }
-    if (qState.answered && i === qData.correct) { cls += ' correct'; }
-    if (qState.answered && qState.selected === i && i !== qData.correct) { cls += ' wrong'; }
-    if (qState.answered && qState.selected === i) { cls += ' selected'; }
-    answersHtml += '<div class="' + cls + '" data-idx="' + i + '" onclick="selectAnswer(' + i + ')"><div class="letter">' + letters[i] + '</div><div>' + qData.a[i] + '</div></div>';
+    if (qState.answered) cls += ' disabled';
+    if (qState.answered && i === qData.correct) cls += ' correct';
+    if (qState.answered && qState.selected === i && i !== qData.correct) cls += ' wrong';
+    if (qState.answered && qState.selected === i) cls += ' selected';
+    answersHtml += '<div class="' + cls + '" onclick="selectAnswer(' + i + ')"><div class="letter">' + letters[i] + '</div><div>' + qData.a[i] + '</div></div>';
   }
-
-  var explanationHtml = '';
-  if (qState.answered) {
-    var isCorrect = qState.selected === qData.correct;
-    explanationHtml = '<div class="test-explanation ' + (isCorrect ? 'correct' : 'wrong') + '">' + (isCorrect ? '✅ ' : '❌ ') + qData.explain + '</div>';
-  }
-
-  var nextHtml = '';
-  if (qState.answered) {
-    if (qIdx < total - 1) {
-      nextHtml = '<button class="test-btn next" onclick="nextQuestion()">Следующий вопрос →</button>';
-    } else {
-      nextHtml = '<button class="test-btn finish" onclick="finishTest()">Завершить тест</button>';
-    }
-  }
-
-  contentDiv.innerHTML = '<div class="content" style="padding:40px 48px 80px">\
-    <div class="test-header"><h2>🧪 Проверка знаний</h2><p>Ответьте на ' + total + ' вопросов по всем темам</p></div>\
-    <div class="test-progress"><span class="label">Вопрос ' + (qIdx+1) + '/' + total + '</span><div class="bar"><div class="fill" style="width:' + progress + '%"></div></div></div>\
-    <div class="question-card">\
-      <div class="q-num">Билет №' + qData.ticket + ' • ' + tickets.find(function(t){return t.num===qData.ticket}).title + '</div>\
-      <div class="q-text">' + qData.q + '</div>\
-      <div class="answers">' + answersHtml + '</div>\
-      ' + explanationHtml + '\
-      <div class="test-actions">' + nextHtml + '</div>\
-    </div></div>';
+  var expl = qState.answered ? '<div class="test-explanation ' + (qState.selected === qData.correct ? 'correct' : 'wrong') + '">' + (qState.selected === qData.correct ? '✅ ' : '❌ ') + qData.explain + '</div>' : '';
+  if (qState.answered) nextHtml = qIdx < total - 1 ? '<button class="test-btn next" onclick="nextQuestion()">Следующий →</button>' : '<button class="test-btn finish" onclick="finishTest()">Завершить</button>';
+  c.innerHTML = '<div class="content"><div class="test-header"><h2>🧪 Проверка знаний</h2><p>' + total + ' вопросов</p></div><div class="test-progress"><span class="label">' + (qIdx+1) + '/' + total + '</span><div class="bar"><div class="fill" style="width:' + ((qIdx+1)/total*100) + '%"></div></div></div><div class="question-card"><div class="q-num">Билет №' + qData.ticket + '</div><div class="q-text">' + qData.q + '</div><div class="answers">' + answersHtml + '</div>' + expl + '<div class="test-actions">' + nextHtml + '</div></div></div>';
   document.getElementById('mainContent').scrollTop = 0;
 }
 
 function selectAnswer(idx) {
-  const qState = testState.questions[testState.current];
-  if (qState.answered) return;
-  qState.answered = true;
-  qState.selected = idx;
+  var qs = testState.questions[testState.current];
+  if (qs.answered) return;
+  qs.answered = true; qs.selected = idx;
   if (idx === questions[testState.current].correct) testState.correct++;
   renderTest();
 }
 
-function nextQuestion() {
-  if (testState.current < questions.length - 1) {
-    testState.current++;
-    renderTest();
-  }
-}
+function nextQuestion() { testState.current++; renderTest(); }
 
-function finishTest() {
-  testState.finished = true;
-  renderTest();
-}
+function finishTest() { testState.finished = true; renderTest(); }
 
 function renderTestResult() {
-  const total = questions.length;
-  const correct = testState.correct;
-  const pct = Math.round((correct / total) * 100);
-  var gradeClass = 'e';
-  var gradeText = 'Попробуйте ещё раз 💪';
-  if (pct >= 90) { gradeClass = 'a'; gradeText = 'Отлично! 🎉'; }
-  else if (pct >= 75) { gradeClass = 'b'; gradeText = 'Хорошо! 👍'; }
-  else if (pct >= 60) { gradeClass = 'c'; gradeText = 'Неплохо! 📖'; }
-  else if (pct >= 40) { gradeClass = 'd'; gradeText = 'Стоит повторить 🤔'; }
-
-  document.getElementById('ticketContent').innerHTML = '<div class="content" style="padding:40px 48px 80px">\
-    <div class="result-card">\
-      <div style="font-size:48px;margin-bottom:8px">' + (pct >= 60 ? '🎉' : '📚') + '</div>\
-      <h2 style="color:#f0f0ff;margin-bottom:4px">Тест завершён!</h2>\
-      <div class="score ' + gradeClass + '">' + pct + '%</div>\
-      <div class="details">' + gradeText + '</div>\
-      <div class="stats">\
-        <div class="stat">✅ Правильно: <span class="val" style="color:#4acf4a">' + correct + '</span></div>\
-        <div class="stat">❌ Неправильно: <span class="val" style="color:#cf4a4a">' + (total - correct) + '</span></div>\
-        <div class="stat">📊 Всего: <span class="val">' + total + '</span></div>\
-      </div>\
-      <button class="test-btn restart" onclick="startTest()">🔄 Пройти заново</button>\
-      <button class="test-btn secondary" onclick="switchMode(\'read\')" style="margin-left:8px">📖 К билетам</button>\
-    </div></div>';
+  var t = questions.length, c = testState.correct, p = Math.round(c/t*100);
+  var gc = 'e', gt = 'Попробуйте ещё раз 💪';
+  if (p >= 90) { gc='a'; gt='Отлично! 🎉'; } else if (p >= 75) { gc='b'; gt='Хорошо! 👍'; } else if (p >= 60) { gc='c'; gt='Неплохо! 📖'; } else if (p >= 40) { gc='d'; gt='Стоит повторить 🤔'; }
+  document.getElementById('ticketContent').innerHTML = '<div class="content"><div class="result-card"><div style="font-size:48px;margin-bottom:8px">' + (p>=60?'🎉':'📚') + '</div><h2 style="color:#f0f0ff;margin-bottom:4px">Тест завершён!</h2><div class="score ' + gc + '">' + p + '%</div><div class="details">' + gt + '</div><div class="stats"><div class="stat">✅ <span class="val" style="color:#4acf4a">' + c + '</span></div><div class="stat">❌ <span class="val" style="color:#cf4a4a">' + (t-c) + '</span></div><div class="stat">📊 <span class="val">' + t + '</span></div></div><button class="test-btn restart" onclick="startTest()">🔄 Пройти заново</button><button class="test-btn secondary" onclick="switchMode(\'read\')" style="margin-left:8px">📖 К билетам</button></div></div>';
 }
 
-// ==================== FLASHCARDS MODE ====================
 function showFlashcards() {
-  const contentDiv = document.getElementById('ticketContent');
-  const emptyDiv = document.getElementById('emptyState');
-  contentDiv.style.display = 'block';
-  emptyDiv.style.display = 'none';
-
-  var cardsHtml = '<div class="content" style="padding:40px 48px 80px">\
-    <div class="cards-header"><h2>🃏 Карточки для запоминания</h2>\
-    <p>Нажмите на карточку, чтобы увидеть определение. Всего ' + flashcards.length + ' терминов</p></div>\
-    <div class="cards-controls">\
-      <button class="test-btn restart" onclick="switchMode(\'cards\')">🔄 Перемешать</button>\
-      <button class="test-btn secondary" onclick="switchMode(\'read\')">📖 К билетам</button>\
-    </div>\
-    <div class="card-grid">';
-
-  var shuffled = flashcards.slice().sort(function() { return Math.random() - 0.5; });
-  for (var i = 0; i < shuffled.length; i++) {
-    cardsHtml += '<div class="flashcard" onclick="this.classList.toggle(\'flipped\')"><div class="flashcard-inner"><div class="flashcard-face flashcard-front"><strong>' + shuffled[i].term + '</strong><div class="hint">👆 нажмите</div></div><div class="flashcard-face flashcard-back">' + shuffled[i].def + '</div></div></div>';
-  }
-
+  var c = document.getElementById('ticketContent'), e = document.getElementById('emptyState');
+  c.style.display = 'block'; e.style.display = 'none';
+  var cardsHtml = '<div class="content"><div class="cards-header"><h2>🃏 Карточки</h2><p>Кликните для ответа. ' + flashcards.length + ' терминов</p></div><div class="cards-controls"><button class="test-btn restart" onclick="switchMode(\'cards\')">🔄 Перемешать</button><button class="test-btn secondary" onclick="switchMode(\'read\')">📖 К билетам</button></div><div class="card-grid">';
+  var sh = flashcards.slice().sort(function() { return Math.random() - 0.5; });
+  for (var i = 0; i < sh.length; i++) cardsHtml += '<div class="flashcard" onclick="this.classList.toggle(\'flipped\')"><div class="flashcard-inner"><div class="flashcard-face flashcard-front"><strong>' + sh[i].term + '</strong><div class="hint">👆 нажмите</div></div><div class="flashcard-face flashcard-back">' + sh[i].def + '</div></div></div>';
   cardsHtml += '</div></div>';
-  contentDiv.innerHTML = cardsHtml;
+  c.innerHTML = cardsHtml;
   document.getElementById('mainContent').scrollTop = 0;
 }
 
-// ==================== INIT ====================
 renderTickets(tickets);
 updateProgress();
 if (tickets.length > 0) openTicket(1);
